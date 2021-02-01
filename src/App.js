@@ -16,9 +16,7 @@ import MathGamesPage from "./pages/MathGames";
 import PuzzleCollectionPage from "./pages/PuzzleCollection"
 
 import GardenPage from "./pages/Garden.js";
-import GardenStoryPage from "./pages/OurStory";
 import AboutMePage from "./pages/AboutMe";
-import MyProjectsPage from "./pages/MyProjects";
 // import ContactPage from "./pages/Contact";
 
 //  MUI imports
@@ -68,6 +66,7 @@ export default function App() {
                         <Route path="/teach"
                             component={TeachPage}
                         />
+                        {/* Alternate implementation of render with props (active tab) */}
                         {/* <Route path="/teach/:tab"
                             render={(props) => (
                                 <TeachPage {...props} />
@@ -84,24 +83,17 @@ export default function App() {
 
                         
 
-                        {/* GARDEN STUFF */}
+                        {/* GARDEN PAGE */}
                         <Route path="/garden" 
                             component={GardenPage}
                         /> 
 
-                        <Route path="/our_story">
-                            <GardenStoryPage />
-                        </Route> 
 
                         {/* ABOUT ME */}
-                        <Route path="/about_me">
-                            <AboutMePage />
-                        </Route> 
+                        <Route path="/about_me"
+                            component={AboutMePage}
+                        /> 
 
-                        <Route path="/my_projects">
-                            <MyProjectsPage />
-                            {/* <MathGamesPage /> */}
-                        </Route> 
 
                         {/* <Route path="/contact">
                         <ContactPage />

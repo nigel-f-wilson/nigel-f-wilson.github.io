@@ -2,7 +2,7 @@ import React from 'react';
 
 // REACT ROUTER
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Link as RouterLink,
     Route,
     Switch

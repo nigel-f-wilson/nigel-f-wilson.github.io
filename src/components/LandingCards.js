@@ -125,7 +125,14 @@ export default function LandingCards(props) {
                             </Box>
                         </CardActionArea>
                         <CardActions className={classes.flexColumn} >
-                            <Button component={RouterLink} to='/our_story' variant='contained' size="medium" color="primary"   >
+                            <Button variant='contained' size="medium" color="primary"  
+                                component={RouterLink} 
+                                to={{
+                                    pathname: '/garden',
+                                    state: {
+                                        selectedTab: 'our_story',
+                                    }
+                                }} >
                                 Our Story
                             </Button> 
                             {/* <Button component={RouterLink} to='/photo_gallery' variant='contained' size="medium" color="primary" >
@@ -151,7 +158,14 @@ export default function LandingCards(props) {
                             </Box>
                         </CardActionArea>
                         <CardActions className={classes.flexColumn}  >
-                            <Button component={RouterLink} to='/about_me' variant='contained' size="medium" color="primary"  >
+                            <Button variant='contained' size="medium" color="primary"  
+                                component={RouterLink}
+                                to={{
+                                    pathname: '/about_me',
+                                    state: {
+                                        selectedTab: 'overview',
+                                    }
+                                }} >
                                 About Me
                             </Button>
                             {/* <Button component={RouterLink} to='/my_projects' variant='contained' size="medium" color="primary"  >

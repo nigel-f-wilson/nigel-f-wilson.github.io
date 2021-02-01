@@ -5,7 +5,12 @@ import PropTypes from 'prop-types';
 // MY components
 import Navbar from "../components/Navbar/Navbar";
 import SquarePhotoCard from "../components/SquarePhotoCard";
-import WildlifePhotoGrid from "../components/CropInfo/WildlifePhotoGrid";
+// OUR STORY
+import WildlifePhotoGrid from "../components/OurStory/WildlifePhotoGrid";
+import ClassroomInfo from "../components/OurStory/ClassroomInfo";
+
+
+// WHAT WE GROW
 import BananaInfo from "../components/CropInfo/BananaInfo";
 import PapayaInfo from "../components/CropInfo/PapayaInfo";
 import TurmericInfo from "../components/CropInfo/TurmericInfo";
@@ -179,23 +184,26 @@ function getTabIndex(tabName) {
 function OurStoryTabContent() {
     return (
         <React.Fragment>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
+            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h3'>
                 How I Got Into Gardening
             </Typography>
             <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                Before I ever tried my hand at gardening I was interested in foraging for edible wild plants. My
-                garden still shows clear signs of this influence. While certain crops are planted in neat rows 
-                and managed carefully, many other species are naturalized here and are allowed to thrive wherever their seeds 
-                happen to sprout. Because of this approach, a walk around the garden always has a surprize in store!
+                Before I ever tried my hand at gardening I was interested in foraging for edible wild plants and 
+                my garden still shows signs of this influence. While certain crops are planted in neat rows 
+                and managed carefully, many other species are naturalized here and are allowed to thrive 
+                wherever their seeds happen to sprout. Because of this approach, 
+                a walk around the garden always has a surprize in store!
             </Typography>
             <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                I got serious about gardening when I was a sophomore at Ohio University. Working under Dr. Art Tesse, growing in the 
-                well-loved soil of the University Research Gardens, I learned one of the most important lessons about gardening, one that has stuck with
-                me ever since and become a pillar of the way I practice gardening in the STEM Garden: Gardening is less about
-                taking care of plants than most non-gardeners would suspect, it is about taking care of the soil and the whole mini-ecosystem.
-                If you take good care of the soil the rest of the garden takes care of itself.
+                I got serious about gardening when I was a sophomore at Ohio University. Growing under 
+                the mentorship of Dr. Art Tesse in the well-loved soil of the University Research Gardens, 
+                I learned one of the most important lessons about gardening, one that has stuck with
+                me ever since and become a pillar of the way I practice gardening in the STEM Garden: 
+                Gardening is less about taking care of plants than most folks would suspect, it is really 
+                about taking care of the soil and the whole mini-ecosystem.
+                Take good care of the soil and the rest of the garden takes care of itself.
             </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
+            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h3'>
                 Early Days
             </Typography>
             <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
@@ -214,14 +222,14 @@ function OurStoryTabContent() {
                 </Grid>
             </Box>
             
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
+            <Typography align='justify' color='textPrimary' component='p' variant='body1' gutterBottom >
                 In March of 2016, I won a Civic Source auction for a blighted vacant lot at the corner of Port St. and N. Galvez, in New Orleans upper ninth ward.
                 Though I started experimenting right away with what plants would do well in my new garden, for the first three years most of the work was 
                 picking trash out of the soil, eliminating invasive species like ragweed, and bringing in 400 cubic yards of horse manure and other organic matter to compost.  
             </Typography>
 
 
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
+            <Typography align='left' color='textPrimary' component='h3' variant='h3'>
                 Wildlife Habitat
             </Typography>
             <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
@@ -232,15 +240,10 @@ function OurStoryTabContent() {
             </Typography>
             <WildlifePhotoGrid />
 
-
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Building the Classroom
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                
-                
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
+            <ClassroomInfo />
+            
+            
+            <Typography align='left' color='textPrimary' component='h3' variant='h3'>
                 Gardening Philosophy
             </Typography>
             <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
@@ -301,7 +304,7 @@ function WhatsGrowingTabContent() {
 function BuyOurProduceTabContent () {
     return (
         <React.Fragment>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
+            <Typography align='left' color='textPrimary' component='h2' variant='h2'   >
                 Availability
             </Typography>
             <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
@@ -314,13 +317,13 @@ function BuyOurProduceTabContent () {
                 sell to local restaurants, and through the Nola Food Co-op. 
                 We love to meet our customers and give tours of the garden! Know where your food comes from!
             </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
+            <Typography align='left' color='textPrimary' component='h2' variant='h2' >
                 Fresh
             </Typography>
             <Typography align='justify' component='p' variant='body1' gutterBottom>
                 The following fresh produce is availaibe seasonally. All prices are per pound.
             </Typography>
-            <Box px={2} >
+            <Box px={2} py={1} >
                 <Grid container spacing={1}  >
                     <Grid item xs={6}  >
                         <Typography noWrap align='left' gutterBottom component='p' variant='body1'>
@@ -351,7 +354,7 @@ function BuyOurProduceTabContent () {
                 </Grid>
             </Box>
 
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
+            <Typography align='left' color='textPrimary' component='h2' variant='h2' >
                 Frozen
             </Typography>
             <Typography align='justify' component='p' variant='body1' gutterBottom>

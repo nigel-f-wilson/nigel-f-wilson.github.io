@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function TeachPage(props) {
+export default function GardenPage(props) {
     const classes = useStyles();
     let initialTab = getTabIndex(props.location.state.selectedTab);
 
@@ -116,8 +116,8 @@ function GardenTabs(props) {
             <AppBar className={classes.tabBar} position="static"  >
                 <Tabs value={activeTab} onChange={handleChange} aria-label="simple tabs example" centered>
                     <Tab label="Our Story" {...a11yProps(0)} />
-                    <Tab label="What's Growing" {...a11yProps(1)} />
-                    <Tab label="Buy Our Produce" {...a11yProps(2)} />
+                    <Tab label="What We Grow" {...a11yProps(1)} />
+                    <Tab label="For Sale" {...a11yProps(2)} />
                 </Tabs>
             </AppBar>
             <TabPanel className={classes.tabPanel} value={activeTab} index={0}>
@@ -302,106 +302,86 @@ function BuyOurProduceTabContent () {
     return (
         <React.Fragment>
             <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Private and Group Lessons
+                Availability
             </Typography>
             <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                I offer private lessons and small group coaching both online and in person.
-                While you can practice playing chess against opponents of similar skill online any time, it is more fun when you have a partner
-                who you can play with regularly over the board. Group lessons are great for siblings, neighbors, or kids who homeschool together.
-                They enable you and your practice partner to grow together, so that your matches remain challenging and exciting as you improve.
-                I also offer lessons specifically for parents who are new to chess but have a child who has taken an interest.
+                One of the STEM Garden's founding princples is that it is best for food to travel as few
+                miles as possible. We prefer to sell direct to consumer whenever we can.
+                The best way to get your hands on STEM Garden produce is to contact us directly and ask 
+                what is coming ripe this week! We keep a list of interested buyers and reach out 
+                individually a few days before harvest in order to plan the freshest possible deliveries. 
+                Occasionally, when there is a large excess of one crop, we post to Facebook Marketplace, 
+                sell to local restaurants, and through the Nola Food Co-op. 
+                We love to meet our customers and give tours of the garden! Know where your food comes from!
             </Typography>
             <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Chess Club in the Garden
+                Fresh
             </Typography>
-            <Typography align='justify' color='red' component='p' variant='body1'>
-                *** All in-person clubs are suspended until further notice due to Covid-19 ***
+            <Typography align='justify' component='p' variant='body1' gutterBottom>
+                The following fresh produce is availaibe seasonally. All prices are per pound.
             </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                When safe, chess in the garden will be offered every Sunday afternoon from 2-4pm
-                I will be launching a Sunday afternoon chess club in the STEM Garden as soon as it is safe to do so.
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Afterschool Clubs
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                *** All in-person clubs are suspended until further notice due to Covid-19 *** <br />
-                I currently host an afterschool chess club in partnership with the Waldorf School of New Orleans.
-                I am currently seeking schools to partner with to establish new afterschool chess clubs.
-                Need help establishing a chess club at your school? Call me!
-            </Typography>
+            <Box px={2} >
+                <Grid container spacing={1}  >
+                    <Grid item xs={6}  >
+                        <Typography noWrap align='left' gutterBottom component='p' variant='body1'>
+                            Cucumbers <br />
+                            Eggplant <br />
+                            Tomatoes <br />
+                            Papaya <br />
+                            Burro Bananas <br />
+                            Dwarf Cavendish Bananas <br />
+                            Guava <br />
+                            Fig <br />
+                            Turmeric <br />
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={6}  >
+                        <Typography align='right' gutterBottom component='p' variant='body1'>
+                            $2.50 <br />
+                            $2.50 <br />
+                            $2.50 <br />
+                            $3.00 <br />
+                            $2.50 <br />
+                            $3.00 <br />
+                            $6.00 <br />
+                            $7.50 <br />
+                            $15.00 <br />
+                        </Typography>
+                    </Grid>
+                </Grid>
+            </Box>
 
             <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Why Learn Chess?
+                Frozen
             </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                Learning chess helps kids experience firsthand that thinking hard and having fun can go together. <br />
-                Math and Chess have a lot in common. They both require creative, yet disiplined, thinking.
-                Math is very useful, and so kids are required to learn it in school. Unfortunately, that pressure to learn
-                math often causes them to lose sight of the fact that doing math can be really fun. When students feel under pressure
-                in math classes they start asking "Why do I <em>have to</em> learn this?" and "When am I going to <em>need</em> this?" <br /><br />
-
-                By contrast, Chess is an abstract game with no practical applications.  No one is required to learn it,
-                and yet, something about it makes kids feel drawn to apply their full reasoning abilities.
-                No one has ever inturrupted a chess lesson to ask me "When am I going to <em>need</em> this?"
-                Chess makes kids <em>want</em> to think hard.  It is an excellent medium for teaching kids to
-                think out loud and to think through questioning, both skills which carry over and make them more effective
-                learners in all other subjects. including math. Players also develop greater self-awareness about how their
-                emotions affect their thinking process
+            <Typography align='justify' component='p' variant='body1' gutterBottom>
+                We also process and freeze excess fruit at the peak of ripeness. The following are available 
+                year-round, pureed in quart bags: 
             </Typography>
-
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Pricing
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                Chess lessons are priced on a sliding scale, please pay according to your means. <br />
-                <ul>
-                    <li>Private lessons are offered for $25-50 per hour. </li>
-                    <li>Lessons for 2 to 4 students are offered for $40-80 per hour.</li>
-                    <li>Lessons for 5 to 8 students are offered for $60-100 per hour. </li>
-                    <li>Sunday Chess Club in the garden is offered with a suggested donation of $5-10.</li>
-                    <li>The cost for facilitating afterschool clubs can be negotiated on a case by case basis.</li>
-                </ul>
-                As with math tutoring services, I want chess lessons to be accessible to any motivated student.
-                If money is what's holding you back from chess lessons, I am happy to barter or make work-trade agreements.
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Chess Teaching Experience
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                I have played chess for 18 years and I am currently rated ~1600, or in the 90th percentile of players on chess.com.
-                I'm a long way from the title of 'Master' but I have a knack for explaining the game. At the club I went to as a kid
-                I was encouraged to play 'teaching games' with other kids as soon as I had something to teach, so I've been teaching
-                chess even longer than I've been teaching math! <br /> Besides establishing chess clubs at College Track and the
-                Waldorf School I have taught chess summer camps offered by Strategic Thoughts in partnership with NORD.
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Chess & Test Prep
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                I got serious about running youth chess clubs while working at College Track. CT placed a strong emphasis on preping kids for
-                fast-paced high-stakes standardized tests. I reflected on my own experience getting a scholarship based on my ACT score and I
-                realized that, though the math topics covered on the ACT had been gone over in school, what had really prepared me for the test's
-                pressure level and pace was all the speed chess I had played as a kid. It was chess that taught me to cope with time pressure,
-                to focus my mind so that I could think clearly in a stressful circumstance. I offer discounted rates on SAT and ACT prep for
-                students who add on chess lessons.
-            </Typography>
+            <Box px={2} >
+                <Grid container spacing={1}  >
+                    <Grid item xs={6}  >
+                        <Typography noWrap align='left' gutterBottom component='p' variant='body1'>
+                            Papaya <br />
+                            Burro Bananas <br />
+                            Fig <br />
+                            Guava (strained) <br />
+                            Turmeric (shredded) <br />
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={6}  >
+                        <Typography align='right' gutterBottom component='p' variant='body1'>
+                            $3.50 <br />
+                            $3.50 <br />
+                            $8.00 <br />
+                            $7.50 <br />
+                            $18.00 <br />
+                        </Typography>
+                    </Grid>
+                </Grid>
+                
+            </Box>
         </React.Fragment>
     )
 }
 
-// function SquarePhoto(props) {
-//     const classes = useStyles();
-
-//     return (
-//         // <Box p={2} >
-//             <Card className={classes.card}>
-//                 <CardMedia
-//                     className={classes.squareImage}
-//                     image={props.img}
-//                 // title={props.title}
-//                 />
-//             </Card>
-//         // </Box>
-//     );
-// }

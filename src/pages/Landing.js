@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize: 'cover',
     },
     desktopContainer: {
+        minHeight: '100vh',
         backgroundImage: `
             linear-gradient(90deg, 
                 rgba(58,100,22,0.00) 0%, 

@@ -1,6 +1,7 @@
 import React from 'react';
 
 // MY components
+import PhotoGrid from "../../../components/PhotoGrid";
 import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
 // MUI CORE Imports
@@ -71,26 +72,9 @@ export default function OtherCropsInfo(props) {
                 </AccordionDetails>
             </Accordion>
             
-            <PhotoGrid />
+            <PhotoGrid data={photoSet} />
+
         </React.Fragment>
     )
 }
 
-function PhotoGrid(props) {
-    return (
-        <Box my={2}  >
-            <Grid container
-                spacing={1}
-            >
-                {photoSet.map((tile) => (
-                    <Grid item xs={12} sm={tile.gridCols}
-                        key={tile.img}
-                    >
-                        <SquarePhotoCard img={tile.img} />
-
-                    </Grid>
-                ))}
-            </Grid>
-        </Box>
-    )
-}

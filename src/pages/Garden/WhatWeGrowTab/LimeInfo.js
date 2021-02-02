@@ -1,6 +1,7 @@
 import React from 'react';
 
 // MY components
+import PhotoGrid from "../../../components/PhotoGrid";
 import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
 // MUI CORE Imports
@@ -54,46 +55,8 @@ export default function LimeInfo(props) {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <LimePhotoGrid />
+            <PhotoGrid data={photoSet} />
         </React.Fragment>
     )
 }
 
-function LimePhotoGrid(props) {
-    return (
-        <Box my={2}  >
-            <Grid container
-                spacing={1}
-            >
-                {photoSet.map((tile) => (
-                    <Grid item xs={12} sm={tile.gridCols}
-                        key={tile.img}
-                    >
-                        <SquarePhotoCard img={tile.img} />
-
-                    </Grid>
-                ))}
-            </Grid>
-        </Box>
-    )
-}
-
-
-function PhotoGrid(props) {
-
-    return (
-        <Grid container
-            id='grid'
-            spacing={2}
-        >
-            {props.data.map((tile) => (
-                <Grid item xs={12} sm={tile.gridCols}
-                    key={tile.img}
-                >
-                    <SquarePhotoCard tileData={tile} />
-
-                </Grid>
-            ))}
-        </Grid>
-    );
-}

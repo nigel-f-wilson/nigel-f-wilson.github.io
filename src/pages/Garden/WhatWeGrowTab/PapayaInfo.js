@@ -6,7 +6,11 @@ import SquarePhotoCard from "../../../components/SquarePhotoCard";
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 // MY images
@@ -19,6 +23,13 @@ import papaya_picking from  "../../../images/papaya/papaya_picking.JPG";
 import papaya_pile from     "../../../images/papaya/papaya_pile.JPG";
 import papaya_fruit from    "../../../images/papaya/papaya_fruit.JPG";
 
+// STYLES
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles((theme) => ({
+    accordion: {
+        backgroundColor: theme.palette.common.black,
+    },
+}));
 
 const photoSet = [
     {
@@ -50,17 +61,30 @@ const photoSet = [
 
 
 export default function PapayaInfo(props) {
+    const classes = useStyles()
     return (
         <React.Fragment>
-            <Typography align='center' color='textPrimary' component='h2' variant='h2'>
-                Papaya
-            </Typography>
-            <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
-                I didn't come to enjoy eating papaya until I grew them myself. Most papaya sold at grocery stores are picked prematurely to
-                improve shelf-life but as a result they never ripen properly. I usually leave the fruits on the trees until one or two days
-                before they are ready to eat. This way they get much sweeter and develop a interesting flavor.
-                Papaya is a key ingredient in my homegrown fruit smoothies. I sell papaya green, ripe, or frozen.
-            </Typography>
+            <Accordion className={classes.accordion} >
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    IconButtonProps={{ 'color': '#fff' }}
+                >
+                    <Typography align='center' color='textPrimary' component='h2' variant='h2'>
+                        Papaya
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
+                        I didn't come to enjoy eating papaya until I grew them myself. Most papaya sold at grocery stores are picked prematurely to
+                        improve shelf-life but as a result they never ripen properly. I usually leave the fruits on the trees until one or two days
+                        before they are ready to eat. This way they get much sweeter and develop a interesting flavor.
+                        Papaya is a key ingredient in my homegrown fruit smoothies. I sell papaya green, ripe, or frozen.
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            
             <PapayaPhotoGrid />
         </React.Fragment>
     )

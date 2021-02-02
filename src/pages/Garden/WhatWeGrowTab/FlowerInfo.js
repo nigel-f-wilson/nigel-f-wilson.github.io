@@ -3,11 +3,14 @@ import React from 'react';
 // MY components
 import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
-
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 // MY images
@@ -71,14 +74,27 @@ const photoSet = [
 export default function FlowerInfo(props) {
     return (
         <React.Fragment>
-            <Typography align='center' color='textPrimary' component='h2' variant='h2'>
-                Flowers
-            </Typography>
-            <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
-                I prefer to grow food and don't put a lot of energy into growing ornamental plants.
-                That said, there are many food producing plants that also have beautiful flowers. 
-                Some plants I grow primarily for their flowers as a way to attract pollinators. 
-            </Typography>
+            <Accordion >
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    IconButtonProps={{ 'color': '#fff' }}
+                >
+                    <Typography align='center' color='textPrimary' component='h2' variant='h2'>
+                        Flowers
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
+                        I prefer to grow food and don't put a lot of energy into growing ornamental plants.
+                        That said, there are many food producing plants that also have beautiful flowers.
+                        Some plants I grow primarily for their flowers as a way to attract pollinators. 
+                        Other flowering plant are grown for their ability to draw pests away from their 
+                        food-producing neighbors.
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
             <FlowerPhotoGrid />
         </React.Fragment>
     )

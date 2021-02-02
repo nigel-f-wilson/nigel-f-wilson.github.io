@@ -6,7 +6,11 @@ import SquarePhotoCard from "../../../components/SquarePhotoCard";
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 // MY images
@@ -47,13 +51,26 @@ const photoSet = [
 export default function OtherCropsInfo(props) {
     return (
         <React.Fragment>
-            <Typography align='center' color='textPrimary' component='h2' variant='h2'>
-                Other Veggies
-            </Typography>
-            <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
-                Most of the crops listed on this page come from established trees but we also grow a rotation of 
-                seasonal annual veggies including cucumbers, eggplant, zucchini, raddishes, mustard greens, and okra.
-            </Typography>
+            <Accordion >
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    IconButtonProps={{ 'color': '#fff' }}
+                >
+                    <Typography align='center' color='textPrimary' component='h2' variant='h2'>
+                        Other Veggies
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
+                        Most of the crops listed on this page come from established trees but we also grow a 
+                        rotation of seasonal annual veggies including cucumbers, eggplant, zucchini, raddishes, 
+                        mustard greens, and okra.
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            
             <PhotoGrid />
         </React.Fragment>
     )

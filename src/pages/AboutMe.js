@@ -97,9 +97,9 @@ function GardenTabs(props) {
         <Box className={classes.tabs}  >
             <AppBar className={classes.tabBar} position="static"  >
                 <Tabs value={activeTab} onChange={handleChange} aria-label="simple tabs example" centered>
-                    <Tab label="Our Story" {...a11yProps(0)} />
-                    <Tab label="What's Growing" {...a11yProps(1)} />
-                    <Tab label="Buy Our Produce" {...a11yProps(2)} />
+                    <Tab label="Overview" {...a11yProps(0)} />
+                    <Tab label="Programming" {...a11yProps(1)} />
+                    <Tab label="Resume" {...a11yProps(2)} />
                 </Tabs>
             </AppBar>
             <TabPanel className={classes.tabPanel} value={activeTab} index={0}>

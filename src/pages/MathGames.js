@@ -81,7 +81,7 @@ function PageBody(props) {
             <Typography className={classes.titleText} align='left' color='textPrimary' component='h4' variant='h4'>
                 Mathematical Proof and Tic-Tac-Toe
             </Typography>
-            <Typography align='justify' color='secondary' component='body1' variant='body1' gutterBottom >
+            <Typography align='justify' color='secondary' component='p' variant='body1' gutterBottom >
                 Math is all about things that can be prooven using logic. 
                 In the same way a song is an expression of a musician's creativity, a written proof is an expression of a mathematician's creativity.
                 To the trained eye, mathematical proofs have the potential to be stunningly beautiful and elegant. 
@@ -100,7 +100,7 @@ function PageBody(props) {
             <Typography className={classes.titleText} align='left' color='textPrimary' component='h4' variant='h4'>
                 Similarity Beneath the Surface
             </Typography>
-            <Typography align='justify' color='secondary' component='body1' variant='body1' gutterBottom>
+            <Typography align='justify' color='secondary' component='p' variant='body1' gutterBottom>
                 Many problems can be solved by adapting solutions that worked for other problems before. 
                 The first step in reusing a solution is realizing that the two problems fit the same pattern.
                 Often times two real-world problems will seem unrelated on their surfaces even though at a deeper level they are behaving according to the same pattern. 

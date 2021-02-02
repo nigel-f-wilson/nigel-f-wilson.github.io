@@ -1,7 +1,7 @@
 import React from 'react';
 
 // MY components
-import SquarePhotoCard from "../SquarePhotoCard";
+import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
@@ -10,50 +10,37 @@ import Typography from '@material-ui/core/Typography';
 
 
 // MY images
-// turmeric images
-import loquats from "../../images/loquat/loquats.JPG";
-import loquat_harvest from "../../images/loquat/loquat_harvest.JPG";
-import loquat_blossom from "../../images/loquat/loquat_blossom.JPG";
+// lime images
+import lime_harvest from "../../../images/other_crops/lime_harvest.JPG";
 
 
 const photoSet = [
     {
-        img: loquat_harvest,
-        title: 'loquat_harvest',
-        description: ' ',
+        img: lime_harvest,
+        title: 'A pile of fresh picked limes.',
+        description: 'A pile of fresh picked limes.',
         gridCols: 12,
         hideTitle: true,
-    }, {
-        img: loquats,
-        title: ' ',
-        description: '',
-        gridCols: 6,
-        hideTitle: true,
-    }, {
-        img: loquat_blossom,
-        title: ' ',
-        description: '',
-        gridCols: 6,
-        hideTitle: true,
-    },
+    }, 
 ];
 
 
                 
-export default function LoquatInfo(props) {
+export default function LimeInfo(props) {
     return (
         <React.Fragment>
             <Typography align='center' color='textPrimary' component='h2' variant='h2'>
-                Loquat
+                Limes
             </Typography>
             <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
-                Also known as Misbeliefs or Japanese plums.
+                Other citrus varieties coming soon!
             </Typography>
-            <LoquatPhotoGrid />
+            <LimePhotoGrid />
         </React.Fragment>
     )
 }
-function LoquatPhotoGrid(props) {
+
+function LimePhotoGrid(props) {
     return (
         <Box my={2}  >
             <Grid container
@@ -71,6 +58,7 @@ function LoquatPhotoGrid(props) {
         </Box>
     )
 }
+
 
 function PhotoGrid(props) {
 

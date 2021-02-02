@@ -1,7 +1,7 @@
 import React from 'react';
 
 // MY components
-import SquarePhotoCard from "../SquarePhotoCard";
+import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
@@ -11,13 +11,13 @@ import Typography from '@material-ui/core/Typography';
 
 // MY images
 // banana images
-import dwarf_cavendish_harvest from "../../images/banana/dwarf_cavendish_harvest.JPG";
-import banana_papaya_harvest from "../../images/banana/banana_papaya_harvest.JPG";
-import banana_flower from "../../images/banana/banana_flower.JPG";
-import banana_types from "../../images/banana/banana_types.png"
-import banana_papaya_top from "../../images/banana/banana_papaya_top.JPG";
-import banana_bunch from "../../images/banana/banana_bunch.JPG"
-import holding_banana_bunches from "../../images/banana/holding_banana_bunches.JPG"
+import dwarf_cavendish_harvest from "../../../images/banana/dwarf_cavendish_harvest.JPG";
+import banana_papaya_harvest from "../../../images/banana/banana_papaya_harvest.JPG";
+import banana_flower from "../../../images/banana/banana_flower.JPG";
+import banana_types from "../../../images/banana/banana_types.png"
+import banana_papaya_top from "../../../images/banana/banana_papaya_top.JPG";
+import banana_bunch from "../../../images/banana/banana_bunch.JPG"
+import holding_banana_bunches from "../../../images/banana/holding_banana_bunches.JPG"
 
 
 const photoSet = [

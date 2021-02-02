@@ -1,7 +1,8 @@
 import React from 'react';
 
 // MY components
-import SquarePhotoCard from "../SquarePhotoCard";
+import SquarePhotoCard from "../../../components/SquarePhotoCard";
+
 
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
@@ -10,37 +11,50 @@ import Typography from '@material-ui/core/Typography';
 
 
 // MY images
-// lime images
-import lime_harvest from "../../images/other_crops/lime_harvest.JPG";
+// turmeric images
+import loquats from "../../../images/loquat/loquats.JPG";
+import loquat_harvest from "../../../images/loquat/loquat_harvest.JPG";
+import loquat_blossom from "../../../images/loquat/loquat_blossom.JPG";
 
 
 const photoSet = [
     {
-        img: lime_harvest,
-        title: 'A pile of fresh picked limes.',
-        description: 'A pile of fresh picked limes.',
+        img: loquat_harvest,
+        title: 'loquat_harvest',
+        description: ' ',
         gridCols: 12,
         hideTitle: true,
-    }, 
+    }, {
+        img: loquats,
+        title: ' ',
+        description: '',
+        gridCols: 6,
+        hideTitle: true,
+    }, {
+        img: loquat_blossom,
+        title: ' ',
+        description: '',
+        gridCols: 6,
+        hideTitle: true,
+    },
 ];
 
 
                 
-export default function LimeInfo(props) {
+export default function LoquatInfo(props) {
     return (
         <React.Fragment>
             <Typography align='center' color='textPrimary' component='h2' variant='h2'>
-                Limes
+                Loquat
             </Typography>
             <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
-                Other citrus varieties coming soon!
+                Also known as Misbeliefs or Japanese plums.
             </Typography>
-            <LimePhotoGrid />
+            <LoquatPhotoGrid />
         </React.Fragment>
     )
 }
-
-function LimePhotoGrid(props) {
+function LoquatPhotoGrid(props) {
     return (
         <Box my={2}  >
             <Grid container
@@ -58,7 +72,6 @@ function LimePhotoGrid(props) {
         </Box>
     )
 }
-
 
 function PhotoGrid(props) {
 

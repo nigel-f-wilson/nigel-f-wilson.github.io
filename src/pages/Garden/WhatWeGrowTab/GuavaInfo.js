@@ -1,7 +1,8 @@
 import React from 'react';
 
 // MY components
-import SquarePhotoCard from "../SquarePhotoCard";
+import SquarePhotoCard from "../../../components/SquarePhotoCard";
+
 
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
@@ -10,42 +11,46 @@ import Typography from '@material-ui/core/Typography';
 
 
 // MY images
-import fig_harvest from "../../images/fig/fig_harvest.JPG";
-import fig_tree from "../../images/fig/fig_tree.JPG";
+// turmeric images
+import guavas from "../../../images/other_crops/guavas.JPG";
+import pineapple_guava from "../../../images/flowers/pineapple_guava_flowers.JPG";
+
 
 const photoSet = [
     {
-        img: fig_harvest,
-        title: 'Ripe figs',
-        description: '',
+        img: guavas,
+        title: 'Guavas',
+        description: ' ',
         gridCols: 6,
         hideTitle: true,
-    }, {
-        img: fig_tree,
-        title: 'fig tree',
-        description: '',
+    },  
+    {
+        img: pineapple_guava,
+        title: 'Guava Flowers',
+        description: ' ',
         gridCols: 6,
         hideTitle: true,
-    }, 
+    },  
 ];
 
 
+                
 
-export default function FigInfo(props) {
+export default function GuavaInfo(props) {
     return (
         <React.Fragment>
             <Typography align='center' color='textPrimary' component='h2' variant='h2'>
-                Figs
-            </Typography>
-            <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
-                We sell fruit and rooted cuttings in case you want to grow your own.
-            </Typography>
-            <FigPhotoGrid />
+                Guava
+                </Typography>
+            {/* <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
+                Guavas give a unique depth to my homegrown fruit smoothies.
+                </Typography> */}
+            <GuavaPhotoGrid /> 
         </React.Fragment>
     )
 }
 
-function FigPhotoGrid(props) {
+function GuavaPhotoGrid(props) {
     return (
         <Box my={2}  >
             <Grid container
@@ -69,13 +74,14 @@ function PhotoGrid(props) {
 
     return (
         <Grid container
-            spacing={1}
+            id='grid'
+            spacing={2}
         >
-            {photoSet.map((tile) => (
+            {props.data.map((tile) => (
                 <Grid item xs={12} sm={tile.gridCols}
                     key={tile.img}
                 >
-                    <SquarePhotoCard img={tile.img} />
+                    <SquarePhotoCard tileData={tile} />
 
                 </Grid>
             ))}

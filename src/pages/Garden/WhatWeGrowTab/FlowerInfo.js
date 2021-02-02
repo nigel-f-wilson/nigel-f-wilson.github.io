@@ -1,8 +1,8 @@
 import React from 'react';
 
 // MY components
+import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
-import SquarePhotoCard from "../SquarePhotoCard";
 
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
@@ -12,18 +12,18 @@ import Typography from '@material-ui/core/Typography';
 
 // MY images
 // flowers images
-import passionflower        from "../../images/flowers/passion_flower.jpg";
-import sunflower            from "../../images/flowers/sunflower.JPG";
-import hibiscus_flower      from "../../images/flowers/hibiscus_flower.JPG";
-import loquat_blossom       from "../../images/flowers/loquat_blossom.JPG";
-import pineapple_guava      from "../../images/flowers/pineapple_guava_flowers.JPG";
-import pomegranite_flower   from "../../images/flowers/pomegranite_flower.JPG";
-import tobacco_flower       from "../../images/flowers/tobacco_flower.JPG";
-import yarrow_flower        from "../../images/flowers/yarrow_flower.JPG";
-import zinnia_teapot        from "../../images/flowers/zinnia_teapot.JPG";
-import jasmine_flower       from "../../images/flowers/jasmine_flower.JPG";
-import redbud_flower        from "../../images/flowers/redbud_flower.JPG";
-import shell_ginger         from "../../images/flowers/shell_ginger.JPG";
+import passionflower        from "../../../images/flowers/passion_flower.jpg";
+import sunflower            from "../../../images/flowers/sunflower.JPG";
+import hibiscus_flower      from "../../../images/flowers/hibiscus_flower.JPG";
+import loquat_blossom       from "../../../images/flowers/loquat_blossom.JPG";
+import pineapple_guava      from "../../../images/flowers/pineapple_guava_flowers.JPG";
+import pomegranite_flower   from "../../../images/flowers/pomegranite_flower.JPG";
+import tobacco_flower       from "../../../images/flowers/tobacco_flower.JPG";
+import yarrow_flower        from "../../../images/flowers/yarrow_flower.JPG";
+import zinnia_teapot        from "../../../images/flowers/zinnia_teapot.JPG";
+import jasmine_flower       from "../../../images/flowers/jasmine_flower.JPG";
+import redbud_flower        from "../../../images/flowers/redbud_flower.JPG";
+import shell_ginger         from "../../../images/flowers/shell_ginger.JPG";
 
 
 const photoSet = [

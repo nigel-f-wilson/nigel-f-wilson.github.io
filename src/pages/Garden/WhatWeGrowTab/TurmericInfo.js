@@ -1,7 +1,7 @@
 import React from 'react';
 
 // MY components
-import SquarePhotoCard from "../SquarePhotoCard";
+import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
@@ -11,10 +11,10 @@ import Typography from '@material-ui/core/Typography';
 
 // MY images
 // turmeric images
-import turmeric_flower from "../../images/turmeric/turmeric_flower.JPG";
-import turmeric_replanting from "../../images/turmeric/turmeric_replanting.JPG";
-import turmeric_leaves from "../../images/turmeric/turmeric_leaves.JPG";
-import turmeric_harvest from "../../images/turmeric/turmeric_harvest.JPG";
+import turmeric_flower from "../../../images/turmeric/turmeric_flower.JPG";
+import turmeric_replanting from "../../../images/turmeric/turmeric_replanting.JPG";
+import turmeric_leaves from "../../../images/turmeric/turmeric_leaves.JPG";
+import turmeric_harvest from "../../../images/turmeric/turmeric_harvest.JPG";
 
 
 const photoSet = [

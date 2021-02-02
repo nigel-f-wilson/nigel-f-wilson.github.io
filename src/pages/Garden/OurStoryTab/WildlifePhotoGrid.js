@@ -1,26 +1,21 @@
 import React from 'react';
 
-import clsx from 'clsx';
-
 // MY components
-import SquarePhotoCard from "../SquarePhotoCard";
+import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
 
 
 // MY images
 // wildlife images
-import gulf_fritilary from "../../images/wildlife/gulf_fritilary.JPG";
-import fritilary_caterpillars from "../../images/wildlife/fritilary_caterpillars.JPG";
-import frogs_on_shell_ginger from "../../images/wildlife/frogs_on_shell_ginger.JPG";
-import lizard from "../../images/wildlife/lizard.JPG";
-import frog_on_banana_stalk from "../../images/wildlife/frog_on_banana_stalk.JPG";
-import tiger_swallowtail from "../../images/wildlife/tiger_swallowtail_on_dill.JPG";
+import gulf_fritilary from "../../../images/wildlife/gulf_fritilary.JPG";
+import fritilary_caterpillars from "../../../images/wildlife/fritilary_caterpillars.JPG";
+import frogs_on_shell_ginger from "../../../images/wildlife/frogs_on_shell_ginger.JPG";
+import lizard from "../../../images/wildlife/lizard.JPG";
+import frog_on_banana_stalk from "../../../images/wildlife/frog_on_banana_stalk.JPG";
+import tiger_swallowtail from "../../../images/wildlife/tiger_swallowtail_on_dill.JPG";
 
 
 import { makeStyles } from '@material-ui/core/styles';

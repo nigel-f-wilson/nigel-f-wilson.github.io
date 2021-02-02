@@ -1,8 +1,7 @@
 import React from 'react';
 
 // MY components
-
-import SquarePhotoCard from "../SquarePhotoCard";
+import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
@@ -12,12 +11,12 @@ import Typography from '@material-ui/core/Typography';
 
 // MY images
 // other crops images
-import tomato_cuke_harvest from "../../images/other_crops/tomato_cuke_harvest.JPG";
-import colorful_harvest from "../../images/other_crops/colorful_harvest.JPG";
-import lime_harvest from "../../images/other_crops/lime_harvest.JPG";
-import loquat_harvest from "../../images/other_crops/loquat_harvest.JPG";
-import guavas from "../../images/other_crops/guavas.JPG";
-import radishes from "../../images/other_crops/radishes.JPG";
+import tomato_cuke_harvest from "../../../images/other_crops/tomato_cuke_harvest.JPG";
+import colorful_harvest from "../../../images/other_crops/colorful_harvest.JPG";
+import lime_harvest from "../../../images/other_crops/lime_harvest.JPG";
+import loquat_harvest from "../../../images/other_crops/loquat_harvest.JPG";
+import guavas from "../../../images/other_crops/guavas.JPG";
+import radishes from "../../../images/other_crops/radishes.JPG";
 
 
 

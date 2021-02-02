@@ -1,7 +1,7 @@
 import React from 'react';
 
 // MY components
-import SquarePhotoCard from "../SquarePhotoCard";
+import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
@@ -11,13 +11,13 @@ import Typography from '@material-ui/core/Typography';
 
 // MY images
 // papaya images
-import papaya_flower from "../../images/papaya/papaya_flower.JPG";
-import papaya_trees from "../../images/papaya/papaya_trees.JPG";
-import papaya_leaf from "../../images/papaya/papaya_leaf.jpg";
-import papaya_halved from "../../images/papaya/papaya_halved.JPG";
-import papaya_picking from "../../images/papaya/papaya_picking.JPG";
-import papaya_pile from "../../images/papaya/papaya_pile.JPG";
-import papaya_fruit from "../../images/papaya/papaya_fruit.JPG";
+import papaya_flower from   "../../../images/papaya/papaya_flower.JPG";
+import papaya_trees from    "../../../images/papaya/papaya_trees.JPG";
+import papaya_leaf from     "../../../images/papaya/papaya_leaf.jpg";
+import papaya_halved from   "../../../images/papaya/papaya_halved.JPG";
+import papaya_picking from  "../../../images/papaya/papaya_picking.JPG";
+import papaya_pile from     "../../../images/papaya/papaya_pile.JPG";
+import papaya_fruit from    "../../../images/papaya/papaya_fruit.JPG";
 
 
 const photoSet = [

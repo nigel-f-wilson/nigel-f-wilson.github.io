@@ -61,3 +61,18 @@
 .MuiDrawer-paperAnchorRight {
     height: 50%;
 }
+
+
+/* Crop Info Expansion Panels */
+.MuiButtonBase-root.MuiAccordionSummary-root {
+    padding-left: 0px;
+}
+.MuiCollapse-wrapper .MuiAccordionDetails-root {
+    padding: 0px;
+}
+.MuiIconButton-root.MuiAccordionSummary-expandIcon {
+    color: white;
+}
+.MuiPaper-root.MuiAccordion-root {
+    background-color: black;
+}

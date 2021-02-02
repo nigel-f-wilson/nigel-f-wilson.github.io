@@ -2,7 +2,7 @@ import React from 'react';
 
 // REACT ROUTER
 import {
-    HashRouter as Router,
+    BrowserRouter as Router,
     Link as RouterLink,
     Route,
     Switch
@@ -15,7 +15,7 @@ import TeachPage from "./pages/Teach";
 import MathGamesPage from "./pages/MathGames";
 import PuzzleCollectionPage from "./pages/PuzzleCollection"
 
-import GardenPage from "./pages/Garden.js";
+import GardenPage from "./pages/Garden/Garden.js";
 import AboutMePage from "./pages/AboutMe";
 // import ContactPage from "./pages/Contact";
 
@@ -105,6 +105,5 @@ export default function App() {
             </ThemeProvider>
         </React.Fragment>
     );
-    
 }
 

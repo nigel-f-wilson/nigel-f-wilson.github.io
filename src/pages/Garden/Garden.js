@@ -3,30 +3,24 @@ import PropTypes from 'prop-types';
 
 
 // MY components
-import Navbar from "../components/Navbar/Navbar";
-import SquarePhotoCard from "../components/SquarePhotoCard";
+import Navbar from "../../components/Navbar/Navbar";
+import SquarePhotoCard from "../../components/SquarePhotoCard";
+import WhatWeGrowTabContent from "./WhatWeGrowTab/WhatWeGrow";
+
+
 // OUR STORY
-import WildlifePhotoGrid from "../components/OurStory/WildlifePhotoGrid";
-import ClassroomInfo from "../components/OurStory/ClassroomInfo";
+import WildlifePhotoGrid from "./OurStoryTab/WildlifePhotoGrid";
+import ClassroomInfo from "./OurStoryTab/ClassroomInfo";
 
 
-// WHAT WE GROW
-import BananaInfo from "../components/CropInfo/BananaInfo";
-import PapayaInfo from "../components/CropInfo/PapayaInfo";
-import TurmericInfo from "../components/CropInfo/TurmericInfo";
-import LimeInfo from "../components/CropInfo/LimeInfo";
-import LoquatInfo from "../components/CropInfo/LoquatInfo";
-import FigInfo from "../components/CropInfo/FigInfo";
-import GuavaInfo from "../components/CropInfo/GuavaInfo";
-import FlowerInfo from "../components/CropInfo/FlowerInfo";
-import OtherCropsInfo from "../components/CropInfo/OtherCropsInfo";
+
 
 
 // MY images
 // early days images
-import mattresses from "../images/early_days/mattresses.JPG";
-import trash_in_dirt from "../images/early_days/trash_in_dirt.JPG";
-import banana_flower from "../images/banana/banana_flower.JPG";
+import mattresses from "../../images/early_days/mattresses.JPG";
+import trash_in_dirt from "../../images/early_days/trash_in_dirt.JPG";
+import banana_flower from "../../images/banana/banana_flower.JPG";
 
 
 
@@ -99,7 +93,6 @@ export default function GardenPage(props) {
 
                 <GardenTabs initialTab={initialTab} key={initialTab} />
 
-                
             </Container>
 
         </Box>
@@ -130,7 +123,7 @@ function GardenTabs(props) {
             </TabPanel>
 
             <TabPanel className={classes.tabPanel} value={activeTab} index={1} >
-                <WhatsGrowingTabContent />
+                <WhatWeGrowTabContent />
             </TabPanel>
 
             <TabPanel className={classes.tabPanel} value={activeTab} index={2}>
@@ -255,51 +248,7 @@ function OurStoryTabContent() {
     )
 }
 
-function WhatsGrowingTabContent() {
-    const classes = useStyles();
 
-    return (
-        <Grid container spacing={3} >
-            <Grid item xs={12} md={6}>
-                <BananaInfo />
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-                <PapayaInfo />
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-                <TurmericInfo />
-            </Grid>
-            
-            <Grid item xs={12} md={6}>
-                <LoquatInfo />
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-                <LimeInfo />
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-                <FigInfo />
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-                <GuavaInfo />
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-                <FlowerInfo />
-            </Grid>
-            
-            <Grid item xs={12} md={6}>
-                <OtherCropsInfo />
-            </Grid>
-            
-
-        </Grid>
-    )
-}
 
 function BuyOurProduceTabContent () {
     return (

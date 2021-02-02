@@ -65,39 +65,3 @@ export default function ClassroomInfo(props) {
     )
 }
 
-// function BananaPhotoGrid(props) {
-//     return (
-//         <Box my={2}  >
-//             <Grid container
-//                 spacing={1}
-//             >
-//                 {photoSet.map((tile) => (
-//                     <Grid item xs={12} sm={tile.gridCols}
-//                         key={tile.img}
-//                     >
-//                         <SquarePhotoCard img={tile.img} />
-
-//                     </Grid>
-//                 ))}
-//             </Grid>
-//         </Box>
-//     )
-// }
-
-
-// function PhotoGrid(props) {
-//     return (
-//         <Grid container
-//             spacing={2}
-//         >
-//             {props.data.map((tile) => (
-//                 <Grid item xs={12} sm={tile.gridCols}
-//                     key={tile.img}
-//                 >
-//                     <SquarePhotoCard img={tile.img} />
-//                     {/* <SquarePhotoCard tileData={tile} /> */}
-//                 </Grid>
-//             ))}
-//         </Grid>
-//     );
-// }

@@ -1,12 +1,15 @@
 import React from 'react';
 
 // MY components
+import PhotoGrid from "../../../components/PhotoGrid";
 import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
 // MUI CORE Imports
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 // MY images
@@ -43,57 +46,35 @@ const photoSet = [
 export default function TurmericInfo(props) {
     return (
         <React.Fragment>
-            <Typography align='center' color='textPrimary' component='h2' variant='h2'>
-                Turmeric
-            </Typography>
-            <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
-                I started growing a lot of turmeric when I decided that I wanted the STEM Garden to require less maintenance while still producing valuable crops.
-                Turmeric is very happy in New Orleans' climate, especially in our light, well-drained soil. Its broad leaves help shade out
-                weeds and other competition. Unlike the fruits we grow, which need picked daily when they are in season, turmeric only
-                requires hands on work a few days out of the year. It keeps very well if it is dug up in the dry season, so each October
-                I dig up all the turmeric, break the big root clusters into little pieces and replant some portion of them the same day.
-                The roots that are not replanted sell for up to $20 per pound.
-            </Typography>
-            <TurmericPhotoGrid />
+            <Accordion >
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    IconButtonProps={{ 'color': '#fff' }}
+                >
+                    <Typography align='center' color='textPrimary' component='h2' variant='h2'>
+                        Turmeric
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography align='justify' color='textPrimary' component='h2' variant='body1' >
+                        I started growing a lot of turmeric when I decided that I wanted the STEM Garden to require 
+                        less maintenance while still producing crops that bring in a high value relative to the 
+                        space they require. Turmeric is very happy in New Orleans' climate, especially in our light, 
+                        well-drained soil. Its broad leaves help shade out weeds and other competition. Unlike the 
+                        fruits we grow, which need picked daily when they are in season, turmeric only
+                        requires hands on work a few days out of the year. It keeps very well if it is dug up in the 
+                        dry season, so each October I dig up all the turmeric, break the big root clusters into little 
+                        pieces and replant some portion of them the same day. The roots that are not replanted have a 
+                        long shelflife and sell for up to $20 per pound.
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            
+            
+            <PhotoGrid data={photoSet} />
         </React.Fragment>
     )
 }
 
-function TurmericPhotoGrid(props) {
-    return (
-        <Box my={2}  >
-            <Grid container
-                spacing={1}
-            >
-                {photoSet.map((tile) => (
-                    <Grid item xs={12} sm={tile.gridCols}
-                        key={tile.img}
-                    >
-                        <SquarePhotoCard img={tile.img} />
-
-                    </Grid>
-                ))}
-            </Grid>
-        </Box>
-    )
-}
-
-
-function PhotoGrid(props) {
-
-    return (
-        <Grid container
-            id='grid'
-            spacing={2}
-        >
-            {props.data.map((tile) => (
-                <Grid item xs={12} sm={tile.gridCols}
-                    key={tile.img}
-                >
-                    <SquarePhotoCard tileData={tile} />
-
-                </Grid>
-            ))}
-        </Grid>
-    );
-}

@@ -43,22 +43,23 @@ const photoSet = [
         img: papaya_trees,
         title: 'Papaya Halved',
         description: '',
-        gridCols: 4,
-        hideTitle: true,
-    }, {
-        img: papaya_pile,
-        title: 'Banana and Papaya Harvest',
-        description: '',
-        gridCols: 4,
+        gridCols: 6,
         hideTitle: true,
     }, {
         img: papaya_flower,
-        title: 'Dwarf Cavendish Banana Harvest',
-        description: 'We grow two varieties of banana: Burro and Dwarf Cavendish.',
-        gridCols: 4,
+        title: 'Papaya Blossom',
+        description: '',
+        gridCols: 6,
         hideTitle: true,
     }, 
 ];
+    // {
+    //     img: papaya_pile,
+    //     title: 'Banana and Papaya Harvest',
+    //     description: '',
+    //     gridCols: 4,
+    //     hideTitle: true,
+    // }
 
 
 export default function PapayaInfo(props) {

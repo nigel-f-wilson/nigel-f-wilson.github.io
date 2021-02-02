@@ -30,19 +30,19 @@ const photoSet = [
         img: tomato_cuke_harvest,
         title: 'Tomato and Cucumber Harvest',
         description: '',
-        gridCols: 4,
+        gridCols: 12,
         hideTitle: true,
     }, {
         img: colorful_harvest,
         title: 'Loquat Harvest',
         description: 'Loquats are often confused with Kumquats but they aren\'t even related! Both are small orange fruits but Kumquats are citrus while Loquats are members of the Pome family and are closer relatives of apples and pears. They are also known as "misbeliefs" because the fruite ripen so early in the spring time it\'s hard to believe',
-        gridCols: 4,
+        gridCols: 6,
         hideTitle: true,
     }, {
         img: radishes,
         title: 'White Icicle Ladyfinger Radishes',
         description: '',
-        gridCols: 4,
+        gridCols: 6,
         hideTitle: true,
     },
 ];

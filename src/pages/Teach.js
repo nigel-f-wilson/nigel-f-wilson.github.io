@@ -208,17 +208,17 @@ function TutoringTabContent() {
     return (
         <React.Fragment> 
             <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Online and In-Person Availability
+                Availability
             </Typography>
-            <Typography align='justify' color='textPrimargutterBottom y' component='p' variant='body1'>
-                I am currently accepting new students for online tutoring. <br />
+            <Typography align='justify' color='textPrimary' component='p' variant='body1' gutterBottom >
+                I am currently accepting new students for online tutoring and masked in-person tutoring. <br />
                 I hope to begin offering in-person lessons in the garden beginning in February 2021, though this will depend on the pandemic.
                 I am not currently accepting new students for in-home tutoring.
             </Typography>
             <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
                 Grade Levels and Courses Offered
             </Typography>
-            <Typography align='justify' color='textPrimargutterBottom y' component='p' variant='body1'>
+            <Typography align='justify' color='textPrimary' component='p' variant='body1' gutterBottom  >
                 I offer one-on-one and small group math tutoring for students in 3rd through 12th grades and in college level
                 courses on algebra, calculus, statistics, discrete math, and probability.
                 For parents of younger students I offer guidance on how best to help children with their homework.
@@ -230,7 +230,7 @@ function TutoringTabContent() {
             <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
                 Pricing
             </Typography>
-            <Typography align='justify' color='textPrimargutterBottom y' component='p' variant='body1'>
+            <Typography align='justify' color='textPrimary' component='p' variant='body1' gutterBottom  >
                 For private tutoring with students in grade school and high school I charge $40 per hour.
                 For private tutoring with students in taking Calculus, AP, and College level classes I charge $55 per hour.
                 Prices for small group tutoring will be negotiated on a case by case basis.
@@ -240,7 +240,7 @@ function TutoringTabContent() {
             <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
                 My Math Teaching Experience
             </Typography>
-            <Typography align='justify' color='textPrimargutterBottom y' component='p' variant='body1'>
+            <Typography align='justify' color='textPrimary' component='p' variant='body1' gutterBottom >
                 I earned my degree in math education from Ohio University in 2015. While working toward my degree I completed several internships in
                 rural and inner city public schools in Ohio. For my final semester-long teaching internship I lived in New Delhi, India and taught at
                 Step-By-Step School.  In 2016, I moved from Ohio to New Orleans to launch my teaching career at Einstein Middle School.
@@ -281,12 +281,10 @@ function EnrichmentTabContent() {
                 My approach to math enrichment focuses on learning math along the way to reaching another goal you care about, rather than learning math on
                 the promise that someday down the road you'll find it useful. Enrichment can go any direction you want it to! What do you want to build?
                 Here are some favorite trailheads I've used before for enrichment explorations, just to jog your imagination:<br /> 
-                <ul>
-                    <li>Explore the physics of sound waves and the mathematical pattern in the way the frets are spaced on the neck of a guitar.</li>
-                    <li>Build things! Learn how to design and build stable wooden structures. Work your way up to building a catault and learn geometry and calculus along the way.</li>
-                    <li>Master strategy games like Nim, Hex, the 15-Game, and logic puzzles like sudoku and ken-ken. </li>
-                    <li>Learn about the off-grid solar power system that supplies the classroom.</li>
-                </ul>
+                &bull;Explore the physics of sound waves and the mathematical pattern in the way the frets are spaced on the neck of a guitar.
+                &bull;Build things! Learn how to design and build stable wooden structures. Work your way up to building a catault and learn geometry and calculus along the way.
+                &bull;Master strategy games like Nim, Hex, the 15-Game, and logic puzzles like sudoku and ken-ken. 
+                &bull;Learn about the off-grid solar power system that supplies the classroom.
             </Typography>
             <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
                 Pricing
@@ -356,16 +354,15 @@ function ChessTabContent() {
                 Pricing
             </Typography>
             <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                Chess lessons are priced on a sliding scale, please pay according to your means. <br />
-                <ul>
-                    <li>Private lessons are offered for $25-50 per hour. </li>
-                    <li>Lessons for 2 to 4 students are offered for $40-80 per hour.</li>
-                    <li>Lessons for 5 to 8 students are offered for $60-100 per hour. </li>
-                    <li>Sunday Chess Club in the garden is offered with a suggested donation of $5-10.</li>
-                    <li>The cost for facilitating afterschool clubs can be negotiated on a case by case basis.</li>
-                </ul>
-                As with math tutoring services, I want chess lessons to be accessible to any motivated student.
-                If money is what's holding you back from chess lessons, I am happy to barter or make work-trade agreements.
+                &bull;One-on-one lessons are offered for $35 per hour.
+                &bull;Lessons for 2 students are offered for $40 per hour.
+                &bull;Lessons for groups of 3 to 6 students are $15 per student per hour. 
+                &bull;Lessons for groups of 7 to 12 students are $10 per student per hour. 
+                &bull;Sunday Chess Club in the garden is offered with a suggested donation of $5-10.
+                &bull;The cost for facilitating afterschool clubs can be negotiated on a case-by-case basis. <br />
+                As with my math tutoring services, I want chess lessons to be accessible to any student
+                who is really motivated to apply themselves.  If cost is an issue please reach out to me personally,
+                I am happy to barter or make work-trade agreements, lessons in exchange for help with garden projects.
             </Typography>
             <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
                 Chess Teaching Experience

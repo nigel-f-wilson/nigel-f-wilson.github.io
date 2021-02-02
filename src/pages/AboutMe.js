@@ -103,7 +103,7 @@ function GardenTabs(props) {
                 </Tabs>
             </AppBar>
             <TabPanel className={classes.tabPanel} value={activeTab} index={0}>
-                <OurStoryTabContent />
+                <AboutMeTabContent />
             </TabPanel>
 
             <TabPanel className={classes.tabPanel} value={activeTab} index={1} >
@@ -158,48 +158,32 @@ function getTabIndex(tabName) {
     else { return 0 }
 }
 
-function OurStoryTabContent() {
+function AboutMeTabContent() {
     return (
         <React.Fragment>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                How I Got Into Gardening
+            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h3'>
+                Ohio to New Orleans
             </Typography>
             <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                Before I ever tried my hand at gardening I was interested in foraging for edible wild plants. My
-                garden still shows clear signs of this influence. While certain crops are planted in neat rows
-                and managed carefully, many other species are naturalized here and are allowed to thrive wherever their seeds
-                happen to sprout. Because of this approach, a walk around the garden always has a surprize in store!
+                I grew up on the banks of the Scioto River in central Ohio.  As a kid, I dreamed of taking a gap year after
+                high school and canoeing from my backyard down to the Ohio and then the Mississippi Rivers, all the way to
+                New Orleans. When Ohio University offered me a non-deferrable full-tuition scholarship I decided to put my
+                trip to New Orleans on hold and got to school. Four years later, I had my degree in math education and wanted
+                to go somewhere that was a hotbed of innovation in education to launch my teaching career. New Orleans
+                fit that bill, having undergone a post-Katrina transition to charter schools.
+                Asside from professional motivations, during my time at OU I got really into bicycling and gardening and
+                I desperately wanted to live in a warmer climate that would allow me to enjoy biking and gardening year-round.
             </Typography>
             <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                I got serious about gardening when I was a sophomore at Ohio University. Working under Dr. Art Tesse, growing in the
-                well-loved soil of the University Research Gardens, I learned one of the most important lessons about gardening, one that has stuck with
-                me ever since and become a pillar of the way I practice gardening in the STEM Garden: Gardening is less about
-                taking care of plants than most non-gardeners would suspect, it is about taking care of the soil and the whole mini-ecosystem.
-                If you take good care of the soil the rest of the garden takes care of itself.
+                Three months after moving to New Orleans I won an online auction for a blighted vacant lot.
+                When I first began cleaning up that lot I was living out of my van with my shovel and hoe in the
+                passenger seat. Over the next five years, I remediated soil contamination and a chronic flooding issue by
+                bringing in over 350 cubic yards of organic matter to compost, I built two tiny houses on trailers,
+                and equiped them with solar power and rain water catch systems. Eventually the garden reached a point
+                where I could use it to host private tutoring clients.
             </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Early Days
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                After my first three years gardening in various community gardens around Athens, Ohio I wanted to move to a warmer
-                climate and buy land so that I could commit to gardening in one place for years to come, a necessary commitment if you want
-                to practice gardening in a way that focuses on caring for soil.
-            </Typography>
-            <Box py={1} >
-                <Grid container spacing={2}  >
-                    <Grid item xs={12} md={6} >
-                        {/* <SquarePhotoCard img={mattresses} /> */}
-                    </Grid>
-                    <Grid item xs={12} md={6} >
-                        {/* <SquarePhotoCard img={trash_in_dirt} /> */}
-                    </Grid>
-                </Grid>
-            </Box>
-
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                In March of 2016, I won a Civic Source auction for a blighted vacant lot at the corner of Port St. and N. Galvez, in New Orleans upper ninth ward.
-                Though I started experimenting right away with what plants would do well in my new garden, for the first three years most of the work was
-                picking trash out of the soil, eliminating invasive species like ragweed, and bringing in 400 cubic yards of horse manure and other organic matter to compost.
+            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h3'>
+                Current Goals
             </Typography>
 
 

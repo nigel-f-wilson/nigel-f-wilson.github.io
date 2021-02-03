@@ -90,7 +90,12 @@ export default function GardenNavigationList(props) {
                 button
                 onClick={handleClose}
                 component={RouterLink}
-                to='/produce_for_sale'
+                to={{
+                    pathname: '/garden',
+                    state: {
+                        selectedTab: 'for_sale',
+                    }
+                }}
             >
                 <Icon className="fas fa-carrot fa-2x"
                     classes={{ root: classes.icon }}

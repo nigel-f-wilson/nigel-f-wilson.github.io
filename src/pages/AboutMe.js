@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function AboutPage(props) {
+export default function AboutMePage(props) {
     const classes = useStyles();
     let initialTab = getTabIndex(props.location.state.selectedTab);
 
@@ -74,7 +74,7 @@ export default function AboutPage(props) {
                     </Typography>
                 </Box>
 
-                <GardenTabs initialTab={initialTab} key={initialTab} />
+                <AboutMeTabs initialTab={initialTab} key={initialTab} />
 
 
             </Container>
@@ -85,7 +85,7 @@ export default function AboutPage(props) {
 
 
 
-function GardenTabs(props) {
+function AboutMeTabs(props) {
     const classes = useStyles();
     const [activeTab, setActiveTab] = React.useState(props.initialTab);
 

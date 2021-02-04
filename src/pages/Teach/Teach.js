@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 
 // MY components
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 
 // MY images
+import balance_scale from "../../images/balance_scale_waldorf.jpg";
+import multiple_choice from "../../images/multiple_choice_test.jpg";
 
 // MUI Imports
 import Container from '@material-ui/core/Container';

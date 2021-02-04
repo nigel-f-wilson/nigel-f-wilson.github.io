@@ -33,10 +33,10 @@ const useStyles = makeStyles((theme) => ({
         // justifyContent: 'center',
         alignItems: 'center'
     },
-    titleText: {
-        color: theme.palette.common.white,
-        padding: '4.0rem, 0.0rem',
-    },
+    // titleText: {
+    //     color: theme.palette.common.white,
+    //     padding: '4.0rem, 0.0rem',
+    // },
     subtitleText: {
         color: theme.palette.common.white,
         padding: '2.0rem 4.0rem',

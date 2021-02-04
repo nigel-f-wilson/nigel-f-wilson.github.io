@@ -4,6 +4,12 @@ import PropTypes from 'prop-types';
 
 // MY components
 import Navbar from "../../components/Navbar/Navbar";
+import TutoringTab from "./TutoringTab";
+import EnrichmentTab from "./EnrichmentTab";
+import ChessTab from "./ChessTab";
+import TestPrepTab from "./TestPrepTab";
+
+
 
 // MY images
 import balance_scale from "../../images/balance_scale_waldorf.jpg";
@@ -143,23 +149,23 @@ function ServiceTabs(props) {
                 </Tabs>
             </AppBar>
             <TabPanel id='math_tutoring' className={classes.tabPanel} value={activeTab} index={0}>    
-                <TutoringTabContent />
+                <TutoringTab />
             </TabPanel>
 
 
             <TabPanel id='math_enrichment' className={classes.tabPanel} value={activeTab} index={1} >
-                <EnrichmentTabContent />
+                <EnrichmentTab />
             </TabPanel>
 
             
             
             <TabPanel id='chess' className={classes.tabPanel} value={activeTab} index={2}>
-                <ChessTabContent />
+                <ChessTab />
             </TabPanel>
 
 
             <TabPanel className={classes.tabPanel} value={activeTab} index={3}>
-                <TestPrepTabContent />
+                <TestPrepTab />
             </TabPanel>
         </Box>
     );
@@ -206,235 +212,7 @@ function getTabIndex(tabName) {
     else { return 0 }
 }
 
-function TutoringTabContent() {
-    return (
-        <React.Fragment> 
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Availability
-            </Typography>
-            <Typography align='justify' color='textPrimary' component='p' variant='body1' gutterBottom >
-                I am currently accepting new students for online tutoring and masked in-person tutoring. <br />
-                I hope to begin offering in-person lessons in the garden beginning in February 2021, though this will depend on the pandemic.
-                I am not currently accepting new students for in-home tutoring.
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Grade Levels and Courses Offered
-            </Typography>
-            <Typography align='justify' color='textPrimary' component='p' variant='body1' gutterBottom  >
-                I offer one-on-one and small group math tutoring for students in 3rd through 12th grades and in college level
-                courses on algebra, calculus, statistics, discrete math, and probability.
-                For parents of younger students I offer guidance on how best to help children with their homework.
-                I am happy to serve as a math mentor to students who are homeschooled. Math Mentoring involves a combination
-                of enrichment and tutoring on topics required by grade level standards.
-                Be sure to check out the "Enrichment" tab to read about some of the hands-on explorations I have used to get
-                kids in touch with thhe fun side of math.
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Pricing
-            </Typography>
-            <Typography align='justify' color='textPrimary' component='p' variant='body1' gutterBottom  >
-                For private tutoring with students in grade school and high school I charge $40 per hour.
-                For private tutoring with students in taking Calculus, AP, and College level classes I charge $55 per hour.
-                Prices for small group tutoring will be negotiated on a case by case basis.
-                Discounted rates on tutoring services are available for adding on chess lessons or math enrichment.
-                Students who commit to two or more hours of tutoring per week will also recieve support between lessons via text meassage.
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                My Math Teaching Experience
-            </Typography>
-            <Typography align='justify' color='textPrimary' component='p' variant='body1' gutterBottom >
-                I earned my degree in math education from Ohio University in 2015. While working toward my degree I completed several internships in
-                rural and inner city public schools in Ohio. For my final semester-long teaching internship I lived in New Delhi, India and taught at
-                Step-By-Step School.  In 2016, I moved from Ohio to New Orleans to launch my teaching career at Einstein Middle School.
-                Within a few months of moving I purchassed a blighted vacant lot and began the long process of cleaning it up and
-                transforming it into the STEM Garden. Throughout the next two years I spent my mornings developing the garden and taught math and physics
-                at College Track, an afterschool program for aspiring first generation college students.
-                After College Track, I took a break from classroom-based teaching. Students are full of questions about the "real-world" uses for the math
-                they are taught in school so it serves a math teacher well to have some personal experience using math in the "real-world".
-                I worked as farm manager for Recirculating Farms Coaltion and got to learn a lot about aquaponics and the math required to run
-                the business side of a small farm. I also worked as an electrician's assistant with Ziemba Electric and Atlas Electric.
-                I already had some text-book understanding of electrical circuits, but through this experience I learned how to go from theory
-                all the way through to craftsmanlike installations.
-                During the 2019-2020 school year I was back in the classroom, working as the math specialist at the Waldorf School of New Orleans.
-                I designed curriculum and taught math to students in grades 4-8. I taught through the transition to remote learning, but at the end
-                of the year the school had to downsize. Throughout the previous four years I had taken occasional gigs as a free lance in-home math tutor but
-                the pandemic pushed me to take that business online and it has been growing steadily since.
-            </Typography>
-        </React.Fragment>
-    )
-}
 
-function EnrichmentTabContent() {
-    return (
-        <React.Fragment>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Availability
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                Due to the extremely hand-on nature of my math enrichment lessons they are not offered in an online format.
-                I hope to begin offering in-person math enrichment lessons in the garden beginning in March 2021, though this will be depend on the pandemic.
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Topics
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                By Enrichment I mean "All the math they don't teach you in school." I am a jack-of-all-trades and I have applied math to 
-                improve my own life in countless ways, including in building the classroom that I teach out of and the solar array that powers it. 
-                My approach to math enrichment focuses on learning math along the way to reaching another goal you care about, rather than learning math on
-                the promise that someday down the road you'll find it useful. Enrichment can go any direction you want it to! What do you want to build?
-                Here are some favorite trailheads I've used before for enrichment explorations, just to jog your imagination:<br /> 
-                &bull;Explore the physics of sound waves and the mathematical pattern in the way the frets are spaced on the neck of a guitar.
-                &bull;Build things! Learn how to design and build stable wooden structures. Work your way up to building a catault and learn geometry and calculus along the way.
-                &bull;Master strategy games like Nim, Hex, the 15-Game, and logic puzzles like sudoku and ken-ken. 
-                &bull;Learn about the off-grid solar power system that supplies the classroom.
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Pricing
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                My hourly rate for one-on-one math enrichment is $30. I charge less for this service than normal tutoring 
-                because it is more fun and I want to encourage more students to try it out!
-            </Typography>
-            
-        </React.Fragment>
-    )
-}
-
-function ChessTabContent() {
-    return (
-        <React.Fragment>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Private and Group Lessons
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                I offer private lessons and small group coaching both online and in person.
-                While you can practice playing chess against opponents of similar skill online any time, it is more fun when you have a partner 
-                who you can play with regularly over the board. Group lessons are great for siblings, neighbors, or kids who homeschool together.
-                They enable you and your practice partner to grow together, so that your matches remain challenging and exciting as you improve.
-                I also offer lessons specifically for parents who are new to chess but have a child who has taken an interest. 
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Chess Club in the Garden
-            </Typography>
-            <Typography align='justify' color='red' component='p' variant='body1'>
-                *** All in-person clubs are suspended until further notice due to Covid-19 *** 
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                When safe, chess in the garden will be offered every Sunday afternoon from 2-4pm
-                I will be launching a Sunday afternoon chess club in the STEM Garden as soon as it is safe to do so.
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Afterschool Clubs
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                *** All in-person clubs are suspended until further notice due to Covid-19 *** <br />
-                I currently host an afterschool chess club in partnership with the Waldorf School of New Orleans.
-                I am currently seeking schools to partner with to establish new afterschool chess clubs.
-                Need help establishing a chess club at your school? Call me!
-            </Typography>
-            
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Why Learn Chess?
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                Learning chess helps kids experience firsthand that thinking hard and having fun can go together. <br />
-                Math and Chess have a lot in common. They both require creative, yet disiplined, thinking. 
-                Math is very useful, and so kids are required to learn it in school. Unfortunately, that pressure to learn 
-                math often causes them to lose sight of the fact that doing math can be really fun. When students feel under pressure 
-                in math classes they start asking "Why do I <em>have to</em> learn this?" and "When am I going to <em>need</em> this?" <br /><br />
-
-                By contrast, Chess is an abstract game with no practical applications.  No one is required to learn it,
-                and yet, something about it makes kids feel drawn to apply their full reasoning abilities.
-                No one has ever inturrupted a chess lesson to ask me "When am I going to <em>need</em> this?"
-                Chess makes kids <em>want</em> to think hard.  It is an excellent medium for teaching kids to 
-                think out loud and to think through questioning, both skills which carry over and make them more effective 
-                learners in all other subjects. including math. Players also develop greater self-awareness about how their 
-                emotions affect their thinking process
-            </Typography>
-            
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Pricing
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                &bull;One-on-one lessons are offered for $35 per hour.
-                &bull;Lessons for 2 students are offered for $40 per hour.
-                &bull;Lessons for groups of 3 to 6 students are $15 per student per hour. 
-                &bull;Lessons for groups of 7 to 12 students are $10 per student per hour. 
-                &bull;Sunday Chess Club in the garden is offered with a suggested donation of $5-10.
-                &bull;The cost for facilitating afterschool clubs can be negotiated on a case-by-case basis. <br />
-                As with my math tutoring services, I want chess lessons to be accessible to any student
-                who is really motivated to apply themselves.  If cost is an issue please reach out to me personally,
-                I am happy to barter or make work-trade agreements, lessons in exchange for help with garden projects.
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Chess Teaching Experience
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                I have played chess for 18 years and I am currently rated ~1600, or in the 90th percentile of players on chess.com.
-                I'm a long way from the title of 'Master' but I have a knack for explaining the game. At the club I went to as a kid 
-                I was encouraged to play 'teaching games' with other kids as soon as I had something to teach, so I've been teaching 
-                chess even longer than I've been teaching math! <br /> Besides establishing chess clubs at College Track and the 
-                Waldorf School I have taught chess summer camps offered by Strategic Thoughts in partnership with NORD.
-            </Typography>
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Chess & Test Prep
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                I got serious about running youth chess clubs while working at College Track. CT placed a strong emphasis on preping kids for
-                fast-paced high-stakes standardized tests. I reflected on my own experience getting a scholarship based on my ACT score and I
-                realized that, though the math topics covered on the ACT had been gone over in school, what had really prepared me for the test's
-                pressure level and pace was all the speed chess I had played as a kid. It was chess that taught me to cope with time pressure, 
-                to focus my mind so that I could think clearly in a stressful circumstance. I offer discounted rates on SAT and ACT prep for 
-                students who add on chess lessons.
-            </Typography>
-        </React.Fragment>
-    )
-}
-
-function TestPrepTabContent() {
-    return (
-        <React.Fragment >
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Tests Covered
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                I offer one-on-one coaching (online or in person) for students seeking to improve their scores on the math sections 
-                of the SAT&reg;, ACT&reg; and GRE&reg;. I also help students prepare for the AP&reg; Calculus and Physics exams.
-            </Typography>
-
-            <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Approach
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                Preparing for high-stakes standardized tests takes more than just learning the math concepts covered on them.
-                You must also be prepared to apply those concepts to solve unfamiliar types of problems. This requires 
-                creative thinking, something that most people struggle with when under time pressure.
-                I take a wholistic approach to preparing students for these exams. I don't just review the math concepts, I help 
-                students overcome test taking anxiety, learn to mannage their time effectively, and to recognize shortcuts when they
-                are possible.  
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                High-stakes standardized tests are an unfortunate and unavoidable part of the modern education landscape.
-                They are neither a fair nor a complete means of assessing students' academic abilities.
-                They are obsolete and reward qualities that are no longer as valuable to society as Sugata Mitra explains in his
-                2012 TED Talk&reg; <a href="https://www.ted.com/talks/sugata_mitra_build_a_school_in_the_cloud?language=en">"Build a School in the Cloud"</a> 
-                Nonetheless, they are here to stay, and doing well on them can unlock doors. The ACT score I got when I 
-                was a junior in highschool was the key to me earning a full-tuition scholarship to Ohio University, and 
-                ultimately graduating without crushing student loan debt.  I joke that taking the ACT took me about four hours and earned 
-                me a $40,000 scholarship, making it by far the best hourly rate I have ever earned in my working life.
-            </Typography>
-justify         <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
-                Pricing
-            </Typography>
-            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                Test Prep services are priced on a sliding scale, please pay according to your means. 
-                One-on-one test prep is offered for $45-70 per hour. 
-                As with math tutoring services, I want test prep to be accessible to any motivated student.
-                If money is what's holding you back, I am happy to barter or make work-trade agreements.
-            </Typography>
-        </React.Fragment>
-    )
-}
 
 
 {/* <Typography  align='center' color='textPrimary' component='h2' variant='h2'>

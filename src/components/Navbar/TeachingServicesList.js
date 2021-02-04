@@ -172,7 +172,7 @@ export default function TeachingServicesList(props) {
                 onClick={handleClose}
                 component={RouterLink}
                 // to='/teach/puzzles'
-                to='/teach'
+                to='/puzzle_collection'
             >
                 <Icon className="fas fa-puzzle-piece fa-2x"
                     classes={{ root: classes.icon }}

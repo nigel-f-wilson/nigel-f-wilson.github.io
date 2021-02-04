@@ -11,9 +11,9 @@ import {
 // MY COMPONENTS
 import LandingPage from "./pages/Landing";
 
-import TeachPage from "./pages/Teach";
-import MathGamesPage from "./pages/MathGames";
-import PuzzleCollectionPage from "./pages/PuzzleCollection"
+import TeachPage from "./pages/Teach/Teach";
+import MathGamesPage from "./pages/Teach/MathGames";
+import PuzzleCollectionPage from "./pages/Teach/PuzzleCollection"
 
 import GardenPage from "./pages/Garden/Garden.js";
 import AboutMePage from "./pages/AboutMe";

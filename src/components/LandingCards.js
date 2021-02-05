@@ -8,7 +8,7 @@ import fret_measuring from "../images/guitar_fret_spacing_crop1.jpg";
 // import balance_scale from "../images/balance_scale_waldorf.jpg";
 // import multiple_choice from "../images/multiple_choice_test.jpg";
 import banana_papaya_turmeric from "../images/landing_page/banana_papaya_turmeric.JPG";
-import chessclub from "../images/chess_demo_board.jpg";
+// import chessclub from "../images/chess_demo_board.jpg";
 // import chessclub from "../images/chess_club_college_track.jpg";
 import profile_pic from "../images/landing_page/profile_pic.JPG";
 
@@ -18,9 +18,6 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -28,205 +25,112 @@ import Typography from '@material-ui/core/Typography';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-const cardHeight = '1000px';
+// const cardHeight = '1000px';
 
 const useStyles = makeStyles((theme) => ({
     card: {
         height: '100%',
         width: '100%',
-        backgroundColor: '#ddd',
-        padding: '0px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-
+        backgroundColor: '#EEE',
+        
     },
     cardImage: {
         height: 0,
         paddingTop: '100%', // 1:1  Sets the "height" in terms of the Width since % units for padding are based on the width
         // paddingTop: '56.25%', // 16:9
-        // width: '100%',
+    },
+    cardBody: {
+        height: '7rem',
+        margin: '0.35rem 0.7rem',
+    },
+    cardButton: {
+        height: '3rem',
+        width: '66%',
+        margin: '1.0rem auto 1.0rem',
+        display: 'flex',
     },
     
-    flexColumn: {
-        display: 'flex',
-        flexDirection: 'column',
-        
-    }
-
+    
 }));
 
-// DESCRIPTION:  There will be only 4 cards on the landing page: About the Garden, Teaching Services, Chess Clubs, and Meet Nigel
+const cardData = [
+    {
+        'title': 'Teaching Services',
+        'bodyText': 'I offer private tutoring in K-12, AP, and college level math classes, as well as chess lessons, SAT/ ACT test prep, and hands-on math enrichment.',
+        'imageTitle': 'Measuring frets on a guitar',
+        'image': fret_measuring,
+        'pathname': '/teach',
+        'selectedTab': 'tutoring',
+        'buttonText': 'Learn More'
+    },
+    {
+        'title': 'About the Garden',
+        'bodyText': 'Established in 2016, the garden started as a blighted lot and gradually evolved into an oasis of fruit trees and turmeric.',
+        'imageTitle': 'Homegrown bananas, papaya, and turmeric flower',
+        'image': banana_papaya_turmeric,
+        'pathname': '/garden',
+        'selectedTab': 'our_story',
+        'buttonText': 'Our Story'
+    }, 
+    {
+        'title': 'Meet Nigel',
+        'bodyText': 'A jack of all trades who rejoices in learning and teaching about math, technology, sustainable living, and strategy games.',
+        'imageTitle': "Garden founder's profile picture",
+        'image': profile_pic,
+        'pathname': '/about_me',
+        'selectedTab': 'overview',
+        'buttonText': 'About Me'
+    },
+]
+
+// CHESS CLUBS and LESSONS 
+// image={chessclub}
+// title="Students playing chess"
+// Chess Clubs and lessons
+// Playing chess is a fun way for kids to develop their skills at problem solving,
+// time-management, and communication, as well as persistence and sportsmanship. 
+// We offer private and small group lessons and partner with schools to help 
+// them establish chess clubs. 
+// to='/teach'
+// activeTab: 'chess'
+// Learn Chess
 
 export default function LandingCards(props) {
     const classes = useStyles();
     return (
-        <Container
-            className={classes.mobileCardGrid}
-            maxWidth='md'
-        >
+        <Container maxWidth='md' >
             <Grid container spacing={3} >
-                {/* TEACHING SERVICES */}
-                <Grid item xs={12} sm={4} >
-                    <Card className={classes.card} raised>
-                        <CardActionArea>
+                {cardData.map((card) => (
+                    <Grid item xs={12} sm={4} >
+                        <Card className={classes.card} raised>
                             <CardMedia
                                 className={classes.cardImage}
-                                image={fret_measuring}
-                                alt="Student measuring a guitar"
-                                title="Student measuring a guitar"
+                                image={card.image}
+                                alt={card.imageTitle}
+                                title={card.imageTitle}
                             />
-                            {/* <CardContent> */}
-                            <Box p={1.5} >
-                                <Typography color="textSecondary" component="h3" variant="h5" gutterBottom >
-                                    Teaching Services
+                            <Box className={classes.cardBody}  >
+                                <Typography color="textSecondary" component="h3" variant="h5" >
+                                    {card.title}
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" >
-                                    I offer private tutoring in K-12, AP, and college level math classes,
-                                    as well as chess lessons, SAT/ACT test prep, and hands-on math enrichment.
+                                    {card.bodyText}
                                 </Typography>
                             </Box>
-                                
-                            {/* </CardContent> */}
-                        </CardActionArea>
-                        <CardActions>
-                            <Button component={RouterLink} variant='contained' size="medium" color="primary"
+                            <Button className={classes.cardButton} component={RouterLink} variant='contained' size="medium" color="primary"
                                 to={{
-                                    pathname: '/teach',
+                                    pathname: card.pathname,
                                     state: {
-                                        selectedTab: 'tutoring',
+                                        selectedTab: card.selectedTab,
                                     }
                                 }} >
-                                Learn More
-                            </Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
-
-
-                {/* ABOUT THE GARDEN */}
-                <Grid item xs={12} sm={4} >
-                    <Card className={classes.card}>
-                        <CardActionArea>
-                            <CardMedia
-                                className={classes.cardImage}
-                                alt="Homegrown Bananas and Papayas"
-                                image={banana_papaya_turmeric}
-                                title="Homegrown Bananas and Papayas"
-                            />
-                            <Box p={1.5} >
-                                <Typography color="textSecondary" component="h3" variant="h5" gutterBottom  >
-                                    About the Garden
-                                </Typography>
-                                <Typography color="textSecondary" variant="body2" color="textSecondary" >
-                                    Established in 2016, the garden started as a blighted lot and gradually
-                                    evolved into an oasis of turmeric and fruit trees.
-                                </Typography>
-                            </Box>
-                        </CardActionArea>
-                        <CardActions className={classes.flexColumn} >
-                            <Button variant='contained' size="medium" color="primary"  
-                                component={RouterLink} 
-                                to={{
-                                    pathname: '/garden',
-                                    state: {
-                                        selectedTab: 'our_story',
-                                    }
-                                }} >
-                                Our Story
-                            </Button> 
-                            {/* <Button component={RouterLink} to='/photo_gallery' variant='contained' size="medium" color="primary" >
-                                Photo Gallery
-                            </Button> */}
-                        </CardActions>
-                    </Card>
-                </Grid>
-
-
-                {/* MEET NIGEL */}
-                <Grid item xs={12} sm={4} >
-                    <Card className={classes.card}>
-                        <CardActionArea>
-                            <CardMedia className={classes.cardImage} image={profile_pic} title="founder's profile picture" alt="founder's profile picture" />
-                            <Box p={1.5} >
-                                <Typography color='textSecondary' variant="h5" component="h2" gutterBottom >
-                                    Meet Nigel
-                                </Typography>
-                                <Typography color="textSecondary" variant="body2"  >
-                                    I am a jack of all trades. I rejoice in learning about sustainability, technology, and in helping kids see the world from new perspectives.
-                                </Typography>
-                            </Box>
-                        </CardActionArea>
-                        <CardActions className={classes.flexColumn}  >
-                            <Button variant='contained' size="medium" color="primary"  
-                                component={RouterLink}
-                                to={{
-                                    pathname: '/about_me',
-                                    state: {
-                                        selectedTab: 'overview',
-                                    }
-                                }} >
-                                About Me
-                            </Button>
-                            {/* <Button component={RouterLink} to='/my_projects' variant='contained' size="medium" color="primary"  >
-                                My Projects
-                            </Button> */}
-                        </CardActions>
-                    </Card>
-                </Grid>
+                                {card.buttonText}
+                        </Button>
+                        </Card>
+                    </Grid>
+                ))}
             </Grid>
         </Container>
-
-        
-
     )
-
 }
 
-{/* CHESS CLUBS and LESSONS */ }
-{/* <Grid item xs={12} sm={4} >
-                    <Card className={classes.card}>
-                        <CardActionArea>
-                            <CardMedia
-                                className={classes.cardImage}
-                                image={chessclub}
-                                alt="Students playing chess"
-                                title="Students playing chess"
-                            />
-                            <CardContent>
-                                <Typography component="h3" variant="h5" >
-                                    Chess Clubs and Lessons
-                                </Typography>
-                                <Typography
-                                    variant="body2"
-                                    color="textPrimary"
-                                >
-                                    Playing chess is a fun way for kids to develop their skills at problem solving, 
-                                    time-management, and communication, as well as persistence and sportsmanship. 
-                                    We offer private and small group lessons and partner with schools to help 
-                                    them establish chess clubs. 
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button
-                                component={RouterLink}
-                                to='/teach/chess'
-                                variant='contained'
-                                size="medium"
-                                color="primary"
-                            >
-                                Lessons
-                            </Button>
-                            <Button
-                                component={RouterLink}
-                                to='/teach/chess'
-                                variant='contained'
-                                size="medium"
-                                color="primary"
-                            >
-                                Clubs
-                            </Button>
-                        </CardActions>
-                    </Card>
-                </Grid> */}

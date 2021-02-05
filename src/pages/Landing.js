@@ -2,7 +2,6 @@ import React from 'react';
 
 // MY components
 import Navbar from "../components/Navbar/Navbar";
-import SpacerBox from "../components/Navbar/SpacerBox";
 import LandingCards from "../components/LandingCards";
 
 // MY images
@@ -11,7 +10,6 @@ import leaves from "../images/leaves_cropped_for_mobile.jpg";
 // MUI Imports
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
-import AppBar from '@material-ui/core/AppBar';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
@@ -80,9 +78,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '0.0rem 4.0rem',
         textShadow: '0.12rem 0.12rem 0.20rem black',
     },
-    cardArea: {
-        padding: '2.0rem',
-    },
+    
 
 }));
 
@@ -100,17 +96,37 @@ export default function LandingPage(props) {
     )
 }
 
+
+
 function MobileBody(props) {
     const classes = useStyles();
     return (
-        <Box 
-            className={classes.mobileBody}
-            display={{ xs: 'block', md: 'none' }}  
-        >
+        <Box className={classes.mobileBody} display={{ xs: 'block', md: 'none' }}  >
+            <BodyText />
+        </Box>
+    )
+}
+
+
+function DesktopBody(props) {
+    const classes = useStyles();
+    return ( 
+        <Box className={classes.desktopBody}  display={{ xs: 'none', md: 'block' }} >
+            <Container  className={classes.desktopContainer} maxWidth='lg' >
+                <BodyText />
+            </Container>
+        </Box>
+    )
+}
+
+function BodyText(props) {
+    const classes = useStyles();
+    return (
+        <React.Fragment>
             <Typography className={classes.titleText} align='center' color='textPrimary' component='h1' variant='h2' >
                 Sowing the seeds of life&#8209;long learning and DIY&#8209;spirit
-                through hands&#8209;on teaching of math, physics, chess, biology,
-                and programming.
+                through integrated teaching of math, physics, chess, biology,
+                and computer programming.
             </Typography>
             <Typography
                 className={classes.subtitleText}
@@ -123,65 +139,11 @@ function MobileBody(props) {
                 We offer private tutoring and small group lessons, both in the garden and online.
                 We help students meet all common core math standards but see learning math as
                 so much more than that! We emphacize the playful side of mathematical thinking and
-                use many puzzles, games, hands-on projects to engage young imaginations.
+                use many puzzles, games, and hands-on projects to engage young imaginations.
             </Typography>
-            <Box className={classes.cardArea} >
-                <LandingCards  />
+            <Box p={2} paddingBottom={4} >
+                <LandingCards />
             </Box>
-        </Box>
+        </React.Fragment>
     )
 }
-
-
-function DesktopBody(props) {
-    const classes = useStyles();
-    return ( 
-        <Box
-            className={classes.desktopBody}
-            display={{ xs: 'none', md: 'block' }}
-        >
-            <Container
-                className={classes.desktopContainer}
-                maxWidth='lg'
-                // disableGutters
-            >
-                <Typography
-                    className={classes.titleText}
-                    align='center'
-                    color='textPrimary'
-                    component='h1'
-                    variant='h2'
-                >
-                    Sowing the seeds of life&#8209;long learning and DIY&#8209;spirit
-                    through integrated teaching of math, physics, chess, biology,
-                    and computer programming.
-                </Typography>
-
-                <Box
-                    className={classes.smText}
-                    display={{ xs: 'none', sm: 'block' }}
-                >
-                    <Typography
-                        className={classes.subtitleText}
-                        align='justify'
-                        color='textPrimary'
-                        component='h2'
-                        variant='h5'
-                    >
-                        The STEM Garden is an off-grid urban teaching garden, rooted in New Orleans.
-                        We offer private tutoring and small group lessons, both in the garden and online.
-                        We help students excell on the SAT and ACT and meet all Common Core math standards, 
-                        but we see learning math as so much more than that! We emphacize the playful side of 
-                        mathematical thinking and make use of many puzzles, games, and hands-on projects to engage young imaginations.
-                    </Typography>
-                </Box>
-
-                <Box className={classes.cardArea}  >
-                    <LandingCards />
-                </Box>
-            </Container>
-        </Box>
-    
-    )
-}
-

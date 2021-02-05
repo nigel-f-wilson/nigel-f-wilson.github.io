@@ -67,10 +67,6 @@ const useStyles = makeStyles((theme) => ({
     cardArea: {
         // padding: '2.0rem',
     },
-    gridContainer: {
-        display: 'flex',
-        justifyContent: 'center'
-    },
     card: {
         height: '100%',
         width: '100%',
@@ -118,11 +114,9 @@ export default function MathGamesPage(props) {
                     </Typography>
                 </Box>
 
-
                 <MathGamesCards />
 
             </Container>
-
         </Box>
     )
 }
@@ -130,16 +124,8 @@ export default function MathGamesPage(props) {
 function MathGamesCards(props) {
     const classes = useStyles();
     return (
-        <Container
-            className={classes.mobileCardGrid}
-            maxWidth='md'
-        >
-            <Grid container
-                className={classes.gridContainer}
-                id='grid'
-                spacing={3}
-
-            >
+        <Container maxWidth='md' >
+            <Grid container spacing={3} >
 
                 {/* TIC-TAC-TOE and the 15-GAME */}
                 <Grid item xs={12} sm={4} >

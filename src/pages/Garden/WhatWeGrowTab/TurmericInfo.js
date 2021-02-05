@@ -51,7 +51,7 @@ export default function TurmericInfo(props) {
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
-                    IconButtonProps={{ 'color': '#fff' }}
+                    IconButtonProps={{ 'color': 'primary' }}
                 >
                     <Typography align='center' color='textPrimary' component='h2' variant='h2'>
                         Turmeric

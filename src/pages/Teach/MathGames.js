@@ -4,10 +4,14 @@ import {
 } from "react-router-dom";
 
 // MY components
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar"; 
+import SpacerBox from "../../components/Navbar/SpacerBox"; 
+
 
 // MY images
-import tic_tac_toe_screenshot from "../../images/projects/tic_tac_toe_screenshot.JPG";
+import tic_tac_toe_screenshot from "../../images/projects/tictactoehints.JPG";
+import fifteen_game_screenshot from "../../images/projects/fifteengame.JPG";
+import connect_four_game from "../../images/projects/connect-four-game.JPG";
 
 
 // MUI Imports
@@ -30,57 +34,20 @@ const useStyles = makeStyles((theme) => ({
         width: '100vw',
         height: 'auto',
         minHeight: '100vh',
-        backgroundColor: theme.palette.common.black,
+        // backgroundColor: theme.palette.common.black,
+        // backgroundColor: theme.palette.common.black,
+        backgroundColor: '#222',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
     },
     container: {
-        // border: 'solid green 2px',
-        minHeight: '100vh',
-        height: 'auto',
-        backgroundColor: 'inherit',
-        display: 'flex',
-        flexDirection: 'column',
-        // justifyContent: 'center',
-        alignItems: 'center'
-    },
-    // titleText: {
-    //     color: theme.palette.common.white,
-    //     padding: '4.0rem, 0.0rem',
-    // },
-    subtitleText: {
-        color: theme.palette.common.white,
-        padding: '2.0rem 4.0rem',
-    },
-    header: {
-        color: theme.palette.common.white,
-        padding: '0.0rem 0.0rem',
-    },
-    // body: {
-    //     color: theme.palette.common.white,
-    //     padding: '0.0rem 0.0rem',
-    //     paddingBottom: '1.5rem',
-    //     // maxWidth: '640px'
-    // },
-    
-    cardArea: {
-        // padding: '2.0rem',
+        height: 'max(auto, 100vh)',
     },
     card: {
         height: '100%',
         width: '100%',
-        // color: theme.palette.common.white,
-        // backgroundColor: theme.palette.common.black,
-        // backgroundColor: theme.palette.common.white,
-        // backgroundColor: theme.palette.primary.light,
-        // backgroundColor: '#444',
-        backgroundColor: '#ddd',
-        padding: '0px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-
+        backgroundColor: '#EEE',
     },
     cardImage: {
         height: 0,
@@ -88,16 +55,46 @@ const useStyles = makeStyles((theme) => ({
         // paddingTop: '56.25%', // 16:9
         // width: '100%',
     },
-    cardButtonArea: {
-        height: { cardHeight },
+    cardBody: {
+        height: '7rem',
+        margin: '0.35rem 0.7rem',
+    },
+    cardButton: {
+        height: '3rem',
+        width: '66%',
+        margin: '1.0rem auto 1.0rem',
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-around'
-    }
-
+    },
 }));
 
 const cardHeight = '1000px';
+
+const cardData = [
+    {
+        'title': 'Tic Tac Toe',
+        'bodyText': 'Learn about mathematical proof and logical rigor while mastering this classic strategy game.',
+        'imageTitle': 'Tic Tac Toe game board with hints',
+        'image': tic_tac_toe_screenshot,
+        'href': 'https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/',
+        'buttonText': 'Play Now!'
+    },
+    {
+        'title': 'The 15-Game',
+        'bodyText': 'Practice mental arithmetic in this combinatorial game, then see how, beneath the surface, it is surprisingly similar to another game.',
+        'imageTitle': 'Homegrown bananas, papaya, and turmeric flower',
+        'image': fifteen_game_screenshot,
+        'href': 'https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/fifteen_game',
+        'buttonText': 'Play Now!'
+    },
+    {
+        'title': 'Math Fact Connect Four',
+        'bodyText': 'COMING SOON! Practice basic addition and multiplication facts to make moves in this variation on classic connect four.',
+        'imageTitle': "Garden founder's profile picture",
+        'image': connect_four_game,
+        'href': 'https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/',
+        'buttonText': 'Play Now!'
+    },
+]
 
 
 export default function MathGamesPage(props) {
@@ -116,6 +113,8 @@ export default function MathGamesPage(props) {
 
                 <MathGamesCards />
 
+                <SpacerBox />
+
             </Container>
         </Box>
     )
@@ -126,122 +125,154 @@ function MathGamesCards(props) {
     return (
         <Container maxWidth='md' >
             <Grid container spacing={3} >
-
-                {/* TIC-TAC-TOE and the 15-GAME */}
-                <Grid item xs={12} sm={4} >
-                    <Card className={classes.card} raised>
-                        <CardActionArea>
+                {cardData.map((card) => (
+                    <Grid item xs={12} sm={4} >
+                        <Card className={classes.card} raised>
                             <CardMedia
                                 className={classes.cardImage}
-                                image={tic_tac_toe_screenshot}
-                                alt="Student measuring a guitar"
-                                title="Student measuring a guitar"
+                                image={card.image}
+                                alt={card.imageTitle}
+                                title={card.imageTitle}
                             />
-                            <CardContent>
-                                <Typography component="h3" variant="h5" >
-                                    Tic-Tac-Toe and the 15-Game
+                            <Box className={classes.cardBody}  >
+                                <Typography color="textSecondary" component="h3" variant="h5" >
+                                    {card.title}
                                 </Typography>
-                                <Typography
-                                    variant="body2"
-                                    color="textPrimary"
-                                >
-                                    A math lesson taught through two games. Learn about mathematical proof and how math helps us see the hidden structures
-                                    beneath the messy and chaotic surface of the real-world, all while mastering two classic games!
+                                <Typography variant="body2" color="textSecondary" >
+                                    {card.bodyText}
                                 </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button
-                                component={Link}
-                                href='https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/'
-                                variant='contained'
-                                size="medium"
-                                color="primary"
-                            >
-                                Play Now!
+                            </Box>
+                            <Button className={classes.cardButton} variant='contained' size="medium" color="primary"
+                                component={Link} 
+                                href={card.href} >
+                                {card.buttonText}
                             </Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
-
-
-                {/* Multiplication Fact Connect Connect Four */}
-                <Grid item xs={12} sm={4} >
-                    <Card className={classes.card} raised>
-                        <CardActionArea>
-                            <CardMedia
-                                className={classes.cardImage}
-                                image={tic_tac_toe_screenshot}
-                                alt="Student measuring a guitar"
-                                title="Student measuring a guitar"
-                            />
-                            <CardContent>
-                                <Typography component="h3" variant="h5" >
-                                    Tic-Tac-Toe and the 15-Game
-                                </Typography>
-                                <Typography
-                                    variant="body2"
-                                    color="textPrimary"
-                                >
-                                    A math lesson taught through two games. Learn about mathematical proof and how math helps us see the hidden structures
-                                    beneath the messy and chaotic surface of the real-world, all while mastering two classic games!
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button
-                                component={Link}
-                                href='https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/'
-                                variant='contained'
-                                size="medium"
-                                color="primary"
-                            >
-                                Play Now!
-                            </Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
-
-
-                {/* CHESS Club Rating Tracker */}
-                <Grid item xs={12} sm={4} >
-                    <Card className={classes.card} raised>
-                        <CardActionArea>
-                            <CardMedia
-                                className={classes.cardImage}
-                                image={tic_tac_toe_screenshot}
-                                alt="Student measuring a guitar"
-                                title="Student measuring a guitar"
-                            />
-                            <CardContent>
-                                <Typography component="h3" variant="h5" >
-                                    Chess Club Manager Tool
-                                </Typography>
-                                <Typography variant="body2" color="textPrimary" >
-                                    A tool for hosts of chess clubs to keep track of their members' games and rankings.
-                                    Can be used for other games too!
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button
-                                component={Link}
-                                href='https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/'
-                                variant='contained'
-                                size="medium"
-                                color="primary"
-                            >
-                                Play Now!
-                            </Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
-
-
-                {/* Fair Trade Coffee Industry Simulation */}
-
+                        </Card>
+                    </Grid>
+                ))}
             </Grid>
         </Container>
+    
+    // const classes = useStyles();
+    // return (
+    //     <Container maxWidth='md' >
+    //         <Grid container spacing={3} >
+
+    //             {/* TIC-TAC-TOE and the 15-GAME */}
+    //             <Grid item xs={12} sm={4} >
+    //                 <Card className={classes.card} raised>
+    //                     <CardActionArea>
+    //                         <CardMedia
+    //                             className={classes.cardImage}
+    //                             image={tic_tac_toe_screenshot}
+    //                             alt="Student measuring a guitar"
+    //                             title="Student measuring a guitar"
+    //                         />
+    //                         <CardContent>
+    //                             <Typography component="h3" variant="h5" >
+    //                                 Tic-Tac-Toe
+    //                             </Typography>
+    //                             <Typography
+    //                                 variant="body2"
+    //                                 color="textPrimary"
+    //                             >
+    //                                 A math lesson taught through two games. Learn about mathematical proof and how math helps us see the hidden structures
+    //                                 beneath the messy and chaotic surface of the real-world, all while mastering two classic games!
+    //                             </Typography>
+    //                         </CardContent>
+    //                     </CardActionArea>
+    //                     <CardActions>
+    //                         <Button
+    //                             component={Link}
+    //                             href='https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/'
+    //                             variant='contained'
+    //                             size="medium"
+    //                             color="primary"
+    //                         >
+    //                             Play Now!
+    //                         </Button>
+    //                     </CardActions>
+    //                 </Card>
+    //             </Grid>
+
+
+    //             {/* Multiplication Fact Connect Connect Four */}
+    //             <Grid item xs={12} sm={4} >
+    //                 <Card className={classes.card} raised>
+    //                     <CardActionArea>
+    //                         <CardMedia
+    //                             className={classes.cardImage}
+    //                             image={tic_tac_toe_screenshot}
+    //                             alt="Student measuring a guitar"
+    //                             title="Student measuring a guitar"
+    //                         />
+    //                         <CardContent>
+    //                             <Typography component="h3" variant="h5" >
+    //                                 Tic-Tac-Toe and the 15-Game
+    //                             </Typography>
+    //                             <Typography
+    //                                 variant="body2"
+    //                                 color="textPrimary"
+    //                             >
+    //                                 A math lesson taught through two games. Learn about mathematical proof and how math helps us see the hidden structures
+    //                                 beneath the messy and chaotic surface of the real-world, all while mastering two classic games!
+    //                             </Typography>
+    //                         </CardContent>
+    //                     </CardActionArea>
+    //                     <CardActions>
+    //                         <Button
+    //                             component={Link}
+    //                             href='https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/'
+    //                             variant='contained'
+    //                             size="medium"
+    //                             color="primary"
+    //                         >
+    //                             Play Now!
+    //                         </Button>
+    //                     </CardActions>
+    //                 </Card>
+    //             </Grid>
+
+
+    //             {/* CHESS Club Rating Tracker */}
+    //             <Grid item xs={12} sm={4} >
+    //                 <Card className={classes.card} raised>
+    //                     <CardActionArea>
+    //                         <CardMedia
+    //                             className={classes.cardImage}
+    //                             image={tic_tac_toe_screenshot}
+    //                             alt="Student measuring a guitar"
+    //                             title="Student measuring a guitar"
+    //                         />
+    //                         <CardContent>
+    //                             <Typography component="h3" variant="h5" >
+    //                                 Chess Club Manager Tool
+    //                             </Typography>
+    //                             <Typography variant="body2" color="textPrimary" >
+    //                                 A tool for hosts of chess clubs to keep track of their members' games and rankings.
+    //                                 Can be used for other games too!
+    //                             </Typography>
+    //                         </CardContent>
+    //                     </CardActionArea>
+    //                     <CardActions>
+    //                         <Button
+    //                             component={Link}
+    //                             href='https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/'
+    //                             variant='contained'
+    //                             size="medium"
+    //                             color="primary"
+    //                         >
+    //                             Play Now!
+    //                         </Button>
+    //                     </CardActions>
+    //                 </Card>
+    //             </Grid>
+
+
+        //         {/* Fair Trade Coffee Industry Simulation */}
+
+        //     </Grid>
+        // </Container>
 
 
 

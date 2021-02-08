@@ -6,17 +6,17 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // MATERIAL-UI COMPONENTS
 
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
+// import List from '@material-ui/core/List';
+// import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
+// import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Icon from '@material-ui/core/Icon';
 
 // ICONS
-import SchoolIcon from '@material-ui/icons/School';
-import EcoIcon from '@material-ui/icons/Eco';
-import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
+// import SchoolIcon from '@material-ui/icons/School';
+// import EcoIcon from '@material-ui/icons/Eco';
+// import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 
 const useStyles = makeStyles(theme => ({
     list: {

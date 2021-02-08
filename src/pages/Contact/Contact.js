@@ -8,6 +8,8 @@ import SquarePhotoCard from "../../components/SquarePhotoCard";
 
 
 // MY images
+import fbLogo from "./facebook_logo.png";
+// import fbLogo from "./facebook_logo.jpg";
 import igLogo from "./instagram_logo.jpg";
 import ghLogo from "./octocat_logo.png";
 // import ghLogo from "./GitHub-logo.png";
@@ -19,7 +21,6 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -32,6 +33,16 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+    },
+    fbLogo: {
+        height: '4.0rem',
+        width: '4.0rem',
+        backgroundImage: `
+            url(${fbLogo})  
+        `,
+        backgroundPosition: 'center bottom',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '105%',
     },
     igLogo: {
         height: '4.0rem',
@@ -97,6 +108,9 @@ export default function ContactPage(props) {
                 
 
                 <Box display='flex' justifyContent='space-around' >
+                    <Button className={classes.fbLogo}
+                        href='https://www.instagram.com/nola_stem_garden/'
+                    />
                     <Button className={classes.igLogo}
                         href='https://www.instagram.com/nola_stem_garden/'
                     />
@@ -106,13 +120,7 @@ export default function ContactPage(props) {
                     <Button className={classes.linkedInLogo}
                         href='https://www.instagram.com/nola_stem_garden/'
                     />
-                    <Button className={classes.igLogo}
-                        href='https://www.instagram.com/nola_stem_garden/'
-                    />
-                    <Button className={classes.igLogo}
-                        href='https://www.instagram.com/nola_stem_garden/'
-                    />
-
+                    
                 </Box>
                 {/* <Grid container >
                     <Grid item xs={3} >

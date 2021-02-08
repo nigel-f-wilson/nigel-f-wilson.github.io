@@ -3,24 +3,24 @@ import PropTypes from 'prop-types';
 
 
 // MY components
-import Navbar from "../components/Navbar/Navbar";
-import SquarePhotoCard from "../components/SquarePhotoCard";
+import Navbar from "../../components/Navbar/Navbar";
+import SquarePhotoCard from "../../components/SquarePhotoCard";
 
 
 // MY images
-
+import igLogo from "./instagram_logo.jpg";
+import ghLogo from "./octocat_logo.png";
+// import ghLogo from "./GitHub-logo.png";
+import linkedInLogo from "./linked_in_logo.png";
 
 
 // MUI Imports
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import Button from '@material-ui/core/Button';
+import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
 
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +33,38 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
     },
-    
+    igLogo: {
+        height: '4.0rem',
+        width: '4.0rem',
+        backgroundImage: `
+            url(${igLogo})  
+        `,
+        backgroundPosition: 'center bottom',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '105%',
+    },
+    ghLogo: {
+        height: '4.0rem',
+        width: '4.0rem',
+        backgroundColor: theme.palette.common.white,
+        backgroundImage: `
+            url(${ghLogo})  
+        `,
+        backgroundPosition: 'center bottom',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '95%',
+    },
+    linkedInLogo: {
+        height: '4.0rem',
+        width: '4.0rem',
+        backgroundColor: theme.palette.common.white,
+        backgroundImage: `
+            url(${linkedInLogo})  
+        `,
+        backgroundPosition: 'center bottom',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '95%',
+    }, 
 
 }));
 
@@ -45,27 +76,49 @@ export default function ContactPage(props) {
         <Box className={classes.root}  >
             <Navbar />
 
-            <Container maxWidth='md' disableGutters >
+            <Container maxWidth='sm' disableGutters >
                 <Box my='4.0rem'>
                     <Typography align='center' color='textPrimary' component='h1' variant='h1'>
                         Contact Us
                     </Typography>
                 </Box>
+                <Box mx='3rem' my='3rem'  >
+                    <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
+                        <strong>Phone:</strong>&nbsp; <br />(504)&nbsp;252&nbsp;0762
+                    </Typography>
+                    <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
+                        <strong>Email:</strong>&nbsp; <br />nolastemgarden@gmail.com 
+                    </Typography>
+                    <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
+                        {/* <strong>Social Media</strong> */}
+                    </Typography>
+                </Box>
                 
-                <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
-                    <strong>Phone:</strong>&nbsp; (504)&nbsp;252&nbsp;0762
-                </Typography>
-                <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
-                    <strong>Email:</strong>&nbsp; nolastemgarden@gmail.com
-                </Typography>
-                <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
-                    <strong>Social Media</strong>
-                </Typography>
-                <Grid container >
+                
+
+                <Box display='flex' justifyContent='space-around' >
+                    <Button className={classes.igLogo}
+                        href='https://www.instagram.com/nola_stem_garden/'
+                    />
+                    <Button className={classes.ghLogo}
+                        href='https://github.com/nolastemgarden'
+                    />
+                    <Button className={classes.linkedInLogo}
+                        href='https://www.instagram.com/nola_stem_garden/'
+                    />
+                    <Button className={classes.igLogo}
+                        href='https://www.instagram.com/nola_stem_garden/'
+                    />
+                    <Button className={classes.igLogo}
+                        href='https://www.instagram.com/nola_stem_garden/'
+                    />
+
+                </Box>
+                {/* <Grid container >
                     <Grid item xs={3} >
 
                     </Grid>
-                </Grid>
+                </Grid> */}
 
 
             </Container>

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 // MY components
 import Navbar from "../../components/Navbar/Navbar";
-import SquarePhotoCard from "../../components/SquarePhotoCard";
 
 
 // MY images
@@ -19,7 +18,7 @@ import linkedInLogo from "./linked_in_logo.png";
 // MUI Imports
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
+// import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
@@ -42,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
         `,
         backgroundPosition: 'center bottom',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '105%',
+        backgroundSize: '100%',
     },
     igLogo: {
         height: '4.0rem',
@@ -50,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `
             url(${igLogo})  
         `,
-        backgroundPosition: 'center bottom',
+        backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: '105%',
     },
@@ -61,9 +60,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `
             url(${ghLogo})  
         `,
-        backgroundPosition: 'center bottom',
+        backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '95%',
+        backgroundSize: '97%',
     },
     linkedInLogo: {
         height: '4.0rem',
@@ -72,9 +71,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `
             url(${linkedInLogo})  
         `,
-        backgroundPosition: 'center bottom',
+        backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '95%',
+        backgroundSize: '100%',
     }, 
 
 }));
@@ -88,20 +87,27 @@ export default function ContactPage(props) {
             <Navbar />
 
             <Container maxWidth='sm' disableGutters >
-                <Box my='4.0rem'>
+                <Box my='3.0rem'>
                     <Typography align='center' color='textPrimary' component='h1' variant='h1'>
                         Contact Us
                     </Typography>
                 </Box>
-                <Box mx='3rem' my='3rem'  >
+                <Box mx='3rem' marginBottom='3rem'  >
                     <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
-                        <strong>Phone:</strong>&nbsp; <br />(504)&nbsp;252&nbsp;0762
+                        <strong>Phone:</strong>&nbsp; <br />(504)&nbsp;252&nbsp;0762 <br /> <br />
                     </Typography>
                     <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
-                        <strong>Email:</strong>&nbsp; <br />nolastemgarden@gmail.com 
+                        <strong>Email:</strong>&nbsp; <br />nolastemgarden@gmail.com <br /> <br />
                     </Typography>
-                    <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
-                        {/* <strong>Social Media</strong> */}
+                    <Typography align='center' color='textPrimary' variant='body1' gutterBottom >
+                        Book lessons and buy produce on our Facebook page.
+                        View and help out with my programming projects on GitHub.  <br />
+                    </Typography>
+                    <Typography align='center' color='textPrimary' variant='body1' gutterBottom >
+                        {/* Facebook for lesson booking and produce market.  <br />
+                        Instagram for more up to date garden pictures.   <br />
+                        Git hub to view my code projects (and maybe help me out).  <br />
+                        Linked in for ... whatever it's for. */}
                     </Typography>
                 </Box>
                 

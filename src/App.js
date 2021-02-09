@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 // MY COMPONENTS
-import LandingPage from "./pages/Landing";
+import LandingPage from "./pages/Landing/Landing";
 
 import TeachPage from "./pages/Teach/Teach";
 import MathGamesPage from "./pages/Teach/MathGames";

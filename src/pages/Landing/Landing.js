@@ -1,11 +1,11 @@
 import React from 'react';
 
 // MY components
-import Navbar from "../components/Navbar/Navbar";
-import LandingCards from "../components/LandingCards";
+import Navbar from "../../components/Navbar/Navbar";
+import LandingCards from "./LandingCards";
 
 // MY images
-import leaves from "../images/leaves_cropped_for_mobile.jpg";
+import leaves from "./images/leaves_cropped_for_mobile.jpg";
 
 // MUI Imports
 import Container from '@material-ui/core/Container';

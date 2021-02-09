@@ -82,7 +82,7 @@ export default function GardenPage(props) {
                 disableGutters
             >
                 <Box p='4.0rem'>
-                    <Typography className={classes.titleText} align='center' color='textPrimary' component='h1' variant='h1'>
+                    <Typography align='center' color='textPrimary' component='h1' variant='h1'>
                         About the Garden
                     </Typography>
                 </Box>

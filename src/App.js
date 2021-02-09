@@ -17,7 +17,7 @@ import PuzzleCollectionPage from "./pages/Teach/PuzzleCollection"
 
 import GardenPage from "./pages/Garden/Garden.js";
 import AboutMePage from "./pages/AboutMe";
-// import ContactPage from "./pages/Contact";
+import ContactPage from "./pages/Contact/Contact";
 
 //  MUI imports
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -95,9 +95,9 @@ export default function App() {
                         /> 
 
 
-                        {/* <Route path="/contact">
-                        <ContactPage />
-                        </Route>  */}
+                        <Route path="/contact">
+                            <ContactPage />
+                        </Route> 
                         
                     </Switch>
                 </Router>

@@ -90,7 +90,7 @@ export default function TeachPage(props) {
                         in my study group. I wish he could always be my math teacher! 
                     </Typography>
                     <Typography align='right' color='textPrimary' component='h2' variant='body1' gutterBottom  >
-                        J. Richelson
+                        J. Richelson, Graduate Student at UNO
                     </Typography>
                     <Typography align='justify' color='textPrimary' component='h2' variant='body1' gutterBottom  >
                         "I highly recommend Nigel without reservation for tutoring in mathematics because of his ability to convey the subject 
@@ -99,7 +99,7 @@ export default function TeachPage(props) {
                         to his teaching while encouraging his students' solving ability and thirst for knowledge with an upbeat attitude."
                     </Typography>
                     <Typography align='right' color='textPrimary' component='h2' variant='body1' gutterBottom  >
-                        W. Mains
+                        W. Mains, Parent of a Student
                     </Typography>
                     <Typography align='justify' color='textPrimary' component='h2' variant='body1' gutterBottom  >
                         "I worked with Nigel and witnessed his enthusiasm for teaching math. He developed the math curriculum for and taught 4th-8th grade. 

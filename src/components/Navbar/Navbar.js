@@ -206,7 +206,7 @@ function DesktopNavbar(props) {
 
                         <GardenDropdown />
 
-                        <ContactPageLink />
+                        <ContactPageButton />
 
                     </Box>
                      
@@ -225,24 +225,19 @@ function DesktopNavbar(props) {
 
 
 
-function ContactPageLink() {
+function ContactPageButton() {
     const classes = useStyles();
     
     return (
-        <Box 
-        // className={classes.desktopMenuButton}
+        <Button className={classes.contactButton} variant="text" 
+            component={RouterLink}
+            to="/contact"
         >
-            <Button
-                className={classes.contactButton}
-                variant="text"
-            >
-                <Typography variant="h5">
-                    Contact
-                </Typography>
-
-            </Button>
+            <Typography variant="h5">
+                Contact
+            </Typography>
+        </Button>
             
-        </Box>
     );
 }
 

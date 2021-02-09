@@ -39,10 +39,14 @@ export default function TutoringTabContent() {
             </Typography>
             <Typography align='justify' color='textPrimary' component='p' variant='body1' gutterBottom  >
                 For private tutoring with students in grade school and high school I charge $40 per hour.
-                For private tutoring with students in taking Calculus, AP, and College level classes I charge $55 per hour.
-                Prices for small group tutoring will be negotiated on a case by case basis.
-                Discounted rates on tutoring services are available for adding on chess lessons or math enrichment.
+                For private tutoring with students taking Calculus, AP, and College level mathematics courses I charge $55 per hour.
+                {/* I also offer guidance for parents with young children (ages 6-10) on how they can best support their kids' in math.  */}
+                Prices for small group tutoring can be negotiated on a case-by-case basis.
                 Students who commit to two or more hours of tutoring per week will also recieve support between lessons via text meassage.
+                Discounted rates on tutoring services are available for adding on chess lessons or math enrichment.
+                We believe that quality education should be accessible to any student willing to apply themselves.  
+                If cost is an issue but you think that you'd mesh exceptionally well with the STEM Garden, please reach out to me personally, 
+                I am happy to barter or make work-trade agreements (tutoring in exchange for help with garden projects). 
             </Typography>
             <Typography align='left' color='textPrimary' gutterBottom component='h3' variant='h4'>
                 My Math Teaching Experience

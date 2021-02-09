@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.4fea4fb0.chunk.css",
-    "main.js": "/static/js/main.b50edf16.chunk.js",
-    "main.js.map": "/static/js/main.b50edf16.chunk.js.map",
+    "main.js": "/static/js/main.74172ecf.chunk.js",
+    "main.js.map": "/static/js/main.74172ecf.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.db397412.js",
     "runtime-main.js.map": "/static/js/runtime-main.db397412.js.map",
-    "static/js/2.92d665b1.chunk.js": "/static/js/2.92d665b1.chunk.js",
-    "static/js/2.92d665b1.chunk.js.map": "/static/js/2.92d665b1.chunk.js.map",
+    "static/js/2.b71eada5.chunk.js": "/static/js/2.b71eada5.chunk.js",
+    "static/js/2.b71eada5.chunk.js.map": "/static/js/2.b71eada5.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.4fea4fb0.chunk.css.map": "/static/css/main.4fea4fb0.chunk.css.map",
-    "static/js/2.92d665b1.chunk.js.LICENSE.txt": "/static/js/2.92d665b1.chunk.js.LICENSE.txt",
+    "static/js/2.b71eada5.chunk.js.LICENSE.txt": "/static/js/2.b71eada5.chunk.js.LICENSE.txt",
     "static/media/balance_scale_waldorf.1f1f4de8.jpg": "/static/media/balance_scale_waldorf.1f1f4de8.jpg",
     "static/media/banana_bunch.1a60124f.JPG": "/static/media/banana_bunch.1a60124f.JPG",
     "static/media/banana_flower.6a91f8c8.JPG": "/static/media/banana_flower.6a91f8c8.JPG",
@@ -31,6 +31,7 @@
     "static/media/gulf_fritilary.a825ddaa.JPG": "/static/media/gulf_fritilary.a825ddaa.JPG",
     "static/media/hibiscus_flower.9f2cfebf.JPG": "/static/media/hibiscus_flower.9f2cfebf.JPG",
     "static/media/holding_banana_bunches.50d7d961.JPG": "/static/media/holding_banana_bunches.50d7d961.JPG",
+    "static/media/instagram_logo.1bda8eeb.jpg": "/static/media/instagram_logo.1bda8eeb.jpg",
     "static/media/jasmine_flower.1420b0bb.JPG": "/static/media/jasmine_flower.1420b0bb.JPG",
     "static/media/leaves_cropped_for_mobile.7ef30788.jpg": "/static/media/leaves_cropped_for_mobile.7ef30788.jpg",
     "static/media/lime_harvest.f23cf656.JPG": "/static/media/lime_harvest.f23cf656.JPG",
@@ -70,8 +71,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.db397412.js",
-    "static/js/2.92d665b1.chunk.js",
+    "static/js/2.b71eada5.chunk.js",
     "static/css/main.4fea4fb0.chunk.css",
-    "static/js/main.b50edf16.chunk.js"
+    "static/js/main.74172ecf.chunk.js"
   ]
 }

@@ -4,13 +4,13 @@ import {
 } from "react-router-dom";
 
 // MY images
-import fret_measuring from "../images/guitar_fret_spacing_crop1.jpg";
+import fret_measuring from "./images/guitar_fret_spacing_crop1.jpg";
 // import balance_scale from "../images/balance_scale_waldorf.jpg";
 // import multiple_choice from "../images/multiple_choice_test.jpg";
-import banana_papaya_turmeric from "../images/landing_page/banana_papaya_turmeric.JPG";
+import banana_papaya_turmeric from "./images/banana_papaya_turmeric.JPG";
 // import chessclub from "../images/chess_demo_board.jpg";
 // import chessclub from "../images/chess_club_college_track.jpg";
-import profile_pic from "../images/landing_page/profile_pic.JPG";
+import profile_pic from "./images/profile_pic.JPG";
 
 
 // MUI Imports

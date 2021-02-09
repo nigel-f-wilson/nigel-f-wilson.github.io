@@ -109,7 +109,7 @@ export default function ContactPage(props) {
 
                 <Box display='flex' justifyContent='space-around' >
                     <Button className={classes.fbLogo}
-                        href='https://www.instagram.com/nola_stem_garden/'
+                        href='https://www.facebook.com/Nola-Stem-Garden-110760417109903'
                     />
                     <Button className={classes.igLogo}
                         href='https://www.instagram.com/nola_stem_garden/'
@@ -118,7 +118,7 @@ export default function ContactPage(props) {
                         href='https://github.com/nolastemgarden'
                     />
                     <Button className={classes.linkedInLogo}
-                        href='https://www.instagram.com/nola_stem_garden/'
+                        href='https://www.linkedin.com/in/nigel-wilson-086a6377/'
                     />
                     
                 </Box>

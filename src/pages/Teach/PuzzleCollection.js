@@ -94,6 +94,60 @@ const cardData = [
         'selectedTab': 'overview',
         'buttonText': 'About Me'
     },
+    {
+        'title': 'Teaching Services',
+        'bodyText': 'I offer private tutoring in K-12, AP, and college level math classes, as well as chess lessons, SAT/ ACT test prep, and hands-on math enrichment.',
+        'imageTitle': 'Measuring frets on a guitar',
+        'image': fret_measuring,
+        'pathname': '/teach',
+        'selectedTab': 'tutoring',
+        'buttonText': 'Learn More'
+    },
+    {
+        'title': 'About the Garden',
+        'bodyText': 'Established in 2016, the garden started as a blighted lot and gradually evolved into an oasis of fruit trees and turmeric.',
+        'imageTitle': 'Homegrown bananas, papaya, and turmeric flower',
+        'image': banana_papaya_turmeric,
+        'pathname': '/garden',
+        'selectedTab': 'our_story',
+        'buttonText': 'Our Story'
+    },
+    {
+        'title': 'Meet Nigel',
+        'bodyText': 'A jack of all trades who rejoices in learning and teaching about math, technology, sustainable living, and strategy games.',
+        'imageTitle': "Garden founder's profile picture",
+        'image': profile_pic,
+        'pathname': '/about_me',
+        'selectedTab': 'overview',
+        'buttonText': 'About Me'
+    },
+    {
+        'title': 'Teaching Services',
+        'bodyText': 'I offer private tutoring in K-12, AP, and college level math classes, as well as chess lessons, SAT/ ACT test prep, and hands-on math enrichment.',
+        'imageTitle': 'Measuring frets on a guitar',
+        'image': fret_measuring,
+        'pathname': '/teach',
+        'selectedTab': 'tutoring',
+        'buttonText': 'Learn More'
+    },
+    {
+        'title': 'About the Garden',
+        'bodyText': 'Established in 2016, the garden started as a blighted lot and gradually evolved into an oasis of fruit trees and turmeric.',
+        'imageTitle': 'Homegrown bananas, papaya, and turmeric flower',
+        'image': banana_papaya_turmeric,
+        'pathname': '/garden',
+        'selectedTab': 'our_story',
+        'buttonText': 'Our Story'
+    },
+    {
+        'title': 'Meet Nigel',
+        'bodyText': 'A jack of all trades who rejoices in learning and teaching about math, technology, sustainable living, and strategy games.',
+        'imageTitle': "Garden founder's profile picture",
+        'image': profile_pic,
+        'pathname': '/about_me',
+        'selectedTab': 'overview',
+        'buttonText': 'About Me'
+    },
 ]
 
 

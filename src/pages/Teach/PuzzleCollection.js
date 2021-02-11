@@ -167,21 +167,23 @@ export default function PuzzleCollectionPage(props) {
                         Puzzles
                     </Typography>
                     <Typography align='center' color='textPrimary' variant='body1'>
-                        The following puzzles can be used with students of a wide range of ages. ...
+                        I have been a math and logic puzzle enthusiast since I was young.  
+                        This is my collection of favorites.  
+                    </Typography>
+                    <Typography align='center' color='textPrimary' variant='body1'>
+                        These make  to use for class discussions
+                        herethe following math and logic puzzles from various sources over 
+                        many years of being a puzzle enthusiast. Some are classics and others are thousands of years 
+                        The following puzzles can be used with students of a wide range of ages. 
+                    </Typography>
+                    <Typography align='center' color='textPrimary' variant='body1'>
+                        Dropdown menus with checkboxes to filter by problem subject matter and by grade range.
                     </Typography>
                 </Box>
-                <Grid container >
-                    <Grid item xs={6} sm={4} md={3} >
-{/* PuzzleCards */}
-                    </Grid>
-                    <Grid item xs={6} sm={4} md={3} >
-{/* PuzzleCards */}
-                    </Grid>
-                </Grid>
-                {/* <GardenTabs initialTab={initialTab} key={initialTab} /> */}
-
+                <PuzzleCards 
+                    data={cardData}
+                />
             </Container>
-
         </Box>
     )
 }

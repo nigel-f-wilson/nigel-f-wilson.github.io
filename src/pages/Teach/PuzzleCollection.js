@@ -168,7 +168,10 @@ export default function PuzzleCollectionPage(props) {
                     </Typography>
                     <Typography align='center' color='textPrimary' variant='body1'>
                         I have been a math and logic puzzle enthusiast since I was young.  
-                        This is my collection of favorites.  
+                        This is my collection of favorites. They come from many different books 
+                        and word of mouth sources. Some are recent creations and others are classics
+                        that date back thousands of years.  
+
                     </Typography>
                     <Typography align='center' color='textPrimary' variant='body1'>
                         These make  to use for class discussions
@@ -183,6 +186,16 @@ export default function PuzzleCollectionPage(props) {
                 <PuzzleCards 
                     data={cardData}
                 />
+
+
+                    <Typography align='center' color='textPrimary' variant='body1'>
+                        CITATIONS: for puzzles
+                        Crest of the peacock,
+
+                        
+                        ***I don't take credit for the clip art***
+                        
+                    </Typography>
             </Container>
         </Box>
     )

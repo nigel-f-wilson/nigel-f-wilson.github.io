@@ -8,6 +8,19 @@ import fret_measuring from "../Landing/images/guitar_fret_spacing_crop1.jpg";
 import banana_papaya_turmeric from "../Landing/images/banana_papaya_turmeric.JPG";
 import profile_pic from "../Landing/images/profile_pic.JPG";
 
+import balance_rod from "./images/balance_rod.jpg";
+import biker from "./images/biker.JPG";
+import bouncy_ball from "./images/bouncy_ball.jpg";
+import Brahmagupta from "./images/Brahmagupta.jpg";
+import carrots from "./images/carrots.jpg";
+import cookie_jar from "./images/cookie_jar.jpg";
+import Gauss from "./images/Gauss.jpg";
+import gold_scale from "./images/gold_scale.jpg";
+import hens from "./images/hens.jpg";
+
+
+
+
 
 // MY components
 import Navbar from "../../components/Navbar/Navbar";
@@ -55,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
         // paddingTop: '56.25%', // 16:9
     },
     cardBody: {
-        height: '7rem',
+        height: '3rem',
         margin: '0.35rem 0.7rem',
     },
     cardButton: {
@@ -68,32 +81,77 @@ const useStyles = makeStyles((theme) => ({
 
 const cardData = [
     {
-        'title': 'Teaching Services',
-        'bodyText': 'I offer private tutoring in K-12, AP, and college level math classes, as well as chess lessons, SAT/ ACT test prep, and hands-on math enrichment.',
-        'imageTitle': 'Measuring frets on a guitar',
-        'image': fret_measuring,
+        'title': 'Balance Rod',
+        // 'bodyText': 'Multiplicative nature of torque, center of gravity',
+        'imageTitle': 'balance rod',
+        'image': balance_rod,
         'pathname': '/teach',
         'selectedTab': 'tutoring',
-        'buttonText': 'Learn More'
     },
     {
-        'title': 'About the Garden',
-        'bodyText': 'Established in 2016, the garden started as a blighted lot and gradually evolved into an oasis of fruit trees and turmeric.',
-        'imageTitle': 'Homegrown bananas, papaya, and turmeric flower',
-        'image': banana_papaya_turmeric,
+        'title': 'Increasing the Average',
+        // 'bodyText': 'Solving for the same amount ',
+        'imageTitle': 'biker',
+        'image': biker,
         'pathname': '/garden',
         'selectedTab': 'our_story',
-        'buttonText': 'Our Story'
     },
     {
-        'title': 'Meet Nigel',
-        'bodyText': 'A jack of all trades who rejoices in learning and teaching about math, technology, sustainable living, and strategy games.',
-        'imageTitle': "Garden founder's profile picture",
-        'image': profile_pic,
+        'title': 'Bouncing Ball',
+        // 'bodyText': 'Geometric Sequence Decay, Working with Percents.',
+        'imageTitle': "bouncy ball",
+        'image': bouncy_ball,
+        'pathname': '/about_me',
+    },
+    {
+        'title': "Brahmagupta's Egg Puzzle",
+        // 'bodyText': 'Divisibility, The Chinese Remainder Theorem.
+        'imageTitle': 'Brahmagupta',
+        'image': Brahmagupta,
+        'pathname': '/teach',
+        'selectedTab': 'tutoring',
+    },
+    {
+        'title': "Carrot Harvest",
+        // 'bodyText': 'Area Mazes, Factorization.
+        'imageTitle': 'carrots',
+        'image': carrots,
+        'pathname': '/teach',
+        'selectedTab': 'tutoring',
+    },
+    {
+        'title': 'Cookie Jar',
+        // 'bodyText': 'Established in 2016, the garden started as a blighted lot and gradually evolved into an oasis of fruit trees and turmeric.',
+        'imageTitle': 'Working Backwards',
+        'image': cookie_jar,
+        'pathname': '/garden',
+        'selectedTab': 'our_story',
+    },
+    {
+        'title': "Gauss's Addition Shortcut",
+        // 'bodyText': 'Sum of an Arithmetic Sequence',
+        'imageTitle': "Gauss at his telescope",
+        'image': Gauss,
         'pathname': '/about_me',
         'selectedTab': 'overview',
-        'buttonText': 'About Me'
     },
+    {
+        'title': 'Finding a Fake',
+        // 'bodyText': 'Classic Logic, Creative Thinking',
+        'imageTitle': 'gold scale',
+        'image': gold_scale,
+        'pathname': '/garden',
+        'selectedTab': 'our_story',
+    },
+    {
+        'title': "Hens for the Village",
+        // 'bodyText': 'Algebraic Reasoning, Linear Systems',
+        'imageTitle': "hens",
+        'image': hens,
+        'pathname': '/about_me',
+        'selectedTab': 'overview',
+    },
+    
 ]
 
 
@@ -113,21 +171,37 @@ export default function PuzzleCollectionPage(props) {
                         Puzzles
                     </Typography>
                     <Typography align='center' color='textPrimary' variant='body1'>
-                        The following puzzles can be used with students of a wide range of ages. ...
+                        I have been a math and logic puzzle enthusiast since I was young.  
+                        This is my collection of favorites. They come from many different books 
+                        and word of mouth sources. Some are recent creations and others are classics
+                        that date back thousands of years.  
+
+                    </Typography>
+                    <Typography align='center' color='textPrimary' variant='body1'>
+                        These make  to use for class discussions
+                        herethe following math and logic puzzles from various sources over 
+                        many years of being a puzzle enthusiast. Some are classics and others are thousands of years 
+                        The following puzzles can be used with students of a wide range of ages. 
+                    </Typography>
+                    <Typography align='center' color='textPrimary' variant='body1'>
+                        Coming Soon: Two dropdown menus with checkboxes lists to enable users to 
+                        filter by subject matter, and by grade range.
                     </Typography>
                 </Box>
-                <Grid container >
-                    <Grid item xs={6} sm={4} md={3} >
-{/* PuzzleCards */}
-                    </Grid>
-                    <Grid item xs={6} sm={4} md={3} >
-{/* PuzzleCards */}
-                    </Grid>
-                </Grid>
-                {/* <GardenTabs initialTab={initialTab} key={initialTab} /> */}
+                <PuzzleCards 
+                    data={cardData}
+                />
 
+
+                    <Typography align='center' color='textPrimary' variant='body1'>
+                        CITATIONS: for puzzles
+                        Crest of the peacock,
+
+                        
+                        ***I don't take credit for the clip art***
+                        
+                    </Typography>
             </Container>
-
         </Box>
     )
 }
@@ -163,7 +237,7 @@ function PuzzleCards(props) {
                                         selectedTab: card.selectedTab,
                                     }
                                 }} >
-                                {card.buttonText}
+                                Open PDF
                             </Button>
                         </Card>
                     </Grid>

@@ -13,7 +13,7 @@ import LandingPage from "./pages/Landing/Landing";
 
 import TeachPage from "./pages/Teach/Teach";
 import MathGamesPage from "./pages/Teach/MathGames";
-import PuzzleCollectionPage from "./pages/Teach/PuzzleCollection"
+import PuzzleCollectionPage from "./pages/PuzzleCollection/PuzzleCollection"
 
 import GardenPage from "./pages/Garden/Garden.js";
 import AboutMePage from "./pages/AboutMe";

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Document, Page } from 'react-pdf';
 import {
     Link as RouterLink,
 } from "react-router-dom";
@@ -19,7 +20,12 @@ import gold_scale from "./images/gold_scale.jpg";
 import hens from "./images/hens.jpg";
 
 
+// ICONS
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import DescriptionIcon from '@material-ui/icons/Description';
 
+// PDFs
+import IncreasingTheAverage from "./pdf/IncreasingTheAverage.pdf";
 
 
 // MY components
@@ -67,16 +73,16 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '100%', // 1:1  Sets the "height" in terms of the Width since % units for padding are based on the width
         // paddingTop: '56.25%', // 16:9
     },
-    cardBody: {
-        height: '3rem',
-        margin: '0.35rem 0.7rem',
-    },
-    cardButton: {
-        height: '3rem',
-        width: '66%',
-        margin: '1.0rem auto 1.0rem',
-        display: 'flex',
-    },
+    // cardBody: {
+    //     height: '3rem',
+    //     margin: '0.35rem 0.7rem',
+    // },
+    // cardButton: {
+    //     height: '3rem',
+    //     width: '66%',
+    //     margin: '1.0rem auto 1.0rem',
+    //     // display: 'flex',
+    // },
 }));
 
 const cardData = [
@@ -86,6 +92,7 @@ const cardData = [
         'imageTitle': 'balance rod',
         'image': balance_rod,
         'pathname': '/teach',
+        'href': 'https://docs.google.com/document/d/1h6DlTf9J7M5qoEi4bHGSJHZ254gyPEhFfGV3P6AKSKY/edit?usp=sharing',
         'selectedTab': 'tutoring',
     },
     {
@@ -94,6 +101,7 @@ const cardData = [
         'imageTitle': 'biker',
         'image': biker,
         'pathname': '/garden',
+        'href': 'https://docs.google.com/document/d/1HWwxC_ATB44oX4Kz-mjnnCSnQ3eEeTOWbukyoI_st-M/edit?usp=sharing',
         'selectedTab': 'our_story',
     },
     {
@@ -102,6 +110,7 @@ const cardData = [
         'imageTitle': "bouncy ball",
         'image': bouncy_ball,
         'pathname': '/about_me',
+        'href': 'https://docs.google.com/document/d/1EHn_FE8-pXGazjiOHoQw9udSAa_fycMOuxSJRr-n9Bo/edit?usp=sharing',
     },
     {
         'title': "Brahmagupta's Egg Puzzle",
@@ -110,14 +119,16 @@ const cardData = [
         'image': Brahmagupta,
         'pathname': '/teach',
         'selectedTab': 'tutoring',
+        'href': 'https://docs.google.com/document/d/1KgULETROmJosYqhCO4x7Kl9nifi-FOXcFONdCjfdeQw/edit?usp=sharing',
     },
     {
         'title': "Carrot Harvest",
         // 'bodyText': 'Area Mazes, Factorization.
         'imageTitle': 'carrots',
         'image': carrots,
-        'pathname': '/teach',
+        'pathname': 'https://docs.google.com/document/d/1HQbfLY1B0iz9W23aks6j17aHux0nm-NIS6OVypDb9h0/edit?usp=sharing',
         'selectedTab': 'tutoring',
+        'href': 'https://docs.google.com/document/d/1HQbfLY1B0iz9W23aks6j17aHux0nm-NIS6OVypDb9h0/edit?usp=sharing',
     },
     {
         'title': 'Cookie Jar',
@@ -125,7 +136,8 @@ const cardData = [
         'imageTitle': 'Working Backwards',
         'image': cookie_jar,
         'pathname': '/garden',
-        'selectedTab': 'our_story',
+        'selectedTab': 'our_story', 
+        'href': 'https://docs.google.com/document/d/1cEjhTIVE7ZFGX8pXDRfiXA4uWIVTf8lYNKKPDOAMZU0/edit?usp=sharing',
     },
     {
         'title': "Gauss's Addition Shortcut",
@@ -134,6 +146,7 @@ const cardData = [
         'image': Gauss,
         'pathname': '/about_me',
         'selectedTab': 'overview',
+        'href': 'https://docs.google.com/document/d/1xGuE_7Li-AVM2-OL5HE8LSFJzldaC25dYCqIacWcrBw/edit?usp=sharing',
     },
     {
         'title': 'Finding a Fake',
@@ -141,7 +154,8 @@ const cardData = [
         'imageTitle': 'gold scale',
         'image': gold_scale,
         'pathname': '/garden',
-        'selectedTab': 'our_story',
+        'selectedTab': '',
+        'href': 'https://docs.google.com/document/d/1M9I2g3Acs-7uzSmN6v7qS8posN3dUMrMbXQ-3uiAfLI/edit?usp=sharing',
     },
     {
         'title': "Hens for the Village",
@@ -150,6 +164,7 @@ const cardData = [
         'image': hens,
         'pathname': '/about_me',
         'selectedTab': 'overview',
+        'href': 'https://docs.google.com/document/d/1yZZrOOz66c4hmQhkHhcaiGtL5XS7GJQACxkvOsNjco8/edit?usp=sharing',
     },
     
 ]
@@ -210,6 +225,11 @@ export default function PuzzleCollectionPage(props) {
 
 function PuzzleCards(props) {
     const classes = useStyles();
+
+    const pdfIcon = <PictureAsPdfIcon></PictureAsPdfIcon>;
+    const docsIcon = <DescriptionIcon></DescriptionIcon>;
+
+
     return (
         <Container maxWidth='md' >
             <Grid container spacing={3} >
@@ -222,7 +242,7 @@ function PuzzleCards(props) {
                                 alt={card.imageTitle}
                                 title={card.imageTitle}
                             />
-                            <Box className={classes.cardBody}  >
+                            <Box p={1}  >
                                 <Typography color="textSecondary" component="h3" variant="h5" >
                                     {card.title}
                                 </Typography>
@@ -230,15 +250,31 @@ function PuzzleCards(props) {
                                     {card.bodyText}
                                 </Typography>
                             </Box>
-                            <Button className={classes.cardButton} component={RouterLink} variant='contained' size="medium" color="primary"
+                            <Box p={1} display='flex' justifyContent='space-around' >
+                                <Button variant='contained' 
+                                    size="medium" color="primary"
+                                    startIcon={pdfIcon}
+                                    href={card.pathname}
+                                >
+                                    PDF
+                                    {/* Open PDF */}
+                                </Button>
+                                <Button variant='contained' 
+                                    size="medium" color="primary"
+                                    startIcon={docsIcon}
+                                    href={card.href}
+                                >
+                                    Docs
+                                    {/* Google Docs */}
+                                </Button>
+                            </Box>
+                            {/* <Button className={classes.cardButton} component={RouterLink} variant='contained' size="medium" color="primary"
                                 to={{
                                     pathname: card.pathname,
-                                    state: {
-                                        selectedTab: card.selectedTab,
-                                    }
-                                }} >
+                                }}  >
                                 Open PDF
-                            </Button>
+                            </Button> */}
+                            
                         </Card>
                     </Grid>
                 ))}

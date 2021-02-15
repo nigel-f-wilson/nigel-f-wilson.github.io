@@ -251,21 +251,20 @@ function PuzzleCards(props) {
                                 </Typography>
                             </Box>
                             <Box p={1} display='flex' justifyContent='space-around' >
-                                <Button variant='contained' 
+                                {/* <Button variant='contained' 
                                     size="medium" color="primary"
                                     startIcon={pdfIcon}
                                     href={card.pathname}
                                 >
                                     PDF
-                                    {/* Open PDF */}
-                                </Button>
+                                </Button> */}
                                 <Button variant='contained' 
                                     size="medium" color="primary"
                                     startIcon={docsIcon}
                                     href={card.href}
                                 >
-                                    Docs
-                                    {/* Google Docs */}
+                                    {/* Docs */}
+                                    Google Docs
                                 </Button>
                             </Box>
                             {/* <Button className={classes.cardButton} component={RouterLink} variant='contained' size="medium" color="primary"

@@ -18,7 +18,7 @@ import cookie_jar from "./images/cookie_jar.jpg";
 import Gauss from "./images/Gauss.jpg";
 import gold_scale from "./images/gold_scale.jpg";
 import hens from "./images/hens.jpg";
-
+import horse from "./images/horse.JPG"
 
 // ICONS
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
@@ -140,13 +140,13 @@ const cardData = [
         'href': 'https://docs.google.com/document/d/1cEjhTIVE7ZFGX8pXDRfiXA4uWIVTf8lYNKKPDOAMZU0/edit?usp=sharing',
     },
     {
-        'title': "Gauss's Addition Shortcut",
+        'title': "The Farmer's Purchase",
         // 'bodyText': 'Sum of an Arithmetic Sequence',
-        'imageTitle': "Gauss at his telescope",
-        'image': Gauss,
+        'imageTitle': "horse",
+        'image': horse,
         'pathname': '/about_me',
         'selectedTab': 'overview',
-        'href': 'https://docs.google.com/document/d/1xGuE_7Li-AVM2-OL5HE8LSFJzldaC25dYCqIacWcrBw/edit?usp=sharing',
+        'href': 'https://docs.google.com/document/d/1i1qjHg0dr2sEwOv3RCGV-b8vqgToD6HmS8IeV2KDcU4/edit?usp=sharing',
     },
     {
         'title': 'Finding a Fake',
@@ -165,6 +165,15 @@ const cardData = [
         'pathname': '/about_me',
         'selectedTab': 'overview',
         'href': 'https://docs.google.com/document/d/1yZZrOOz66c4hmQhkHhcaiGtL5XS7GJQACxkvOsNjco8/edit?usp=sharing',
+    },
+    {
+        'title': "Gauss's Addition Shortcut",
+        // 'bodyText': 'Sum of an Arithmetic Sequence',
+        'imageTitle': "Gauss at his telescope",
+        'image': Gauss,
+        'pathname': '/about_me',
+        'selectedTab': 'overview',
+        'href': 'https://docs.google.com/document/d/1xGuE_7Li-AVM2-OL5HE8LSFJzldaC25dYCqIacWcrBw/edit?usp=sharing',
     },
     
 ]

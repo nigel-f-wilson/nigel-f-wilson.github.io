@@ -6,6 +6,7 @@ import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
 // OUR STORY
 import WildlifePhotoGrid from "./WildlifePhotoGrid";
+import TearoomInfo from "./TearoomInfo";
 import ClassroomInfo from "./ClassroomInfo";
 
 
@@ -80,6 +81,9 @@ export default function OurStoryTabContent() {
                 The ability to support diverse animal life is a sign that the ecosystem as a whole is healthy.
             </Typography>
             <WildlifePhotoGrid />
+
+
+            <TearoomInfo />
 
             <ClassroomInfo />
 

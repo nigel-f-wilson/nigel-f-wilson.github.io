@@ -2,46 +2,33 @@ import React from 'react';
 
 // MY components
 import PhotoGrid from "../../../components/PhotoGrid";
-import SquarePhotoCard from "../../../components/SquarePhotoCard";
 
 // MUI CORE Imports
 import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 
 // MY images
-// banana images
-import banana_flower from "../../../images/banana/banana_flower.JPG";
-import banana_papaya_top from "../../../images/banana/banana_papaya_top.JPG";
-import banana_bunch from "../../../images/banana/banana_bunch.JPG"
-import holding_banana_bunches from "../../../images/banana/holding_banana_bunches.JPG"
+import classroom_framed from "../images/classroom_framed.JPG";
+import classroom_rafters from "../images/classroom_rafters.JPG";
+import classroom_complete from "../images/classroom_complete.JPG";
 
 
 const photoSet = [
     {
-        img: banana_flower,
-        title: 'Banana Flower',
-        description: 'Banana flower descending',
-        gridCols: 12,
-        hideTitle: true,
-    }, {
-        img: banana_bunch,
-        title: 'Banana Flower',
-        description: 'Banana flower descending',
+        img: classroom_rafters,
+        title: 'Classroom under construction',
         gridCols: 4,
         hideTitle: true,
     }, {
-        img: holding_banana_bunches,
-        title: 'Banana and Papaya Harvest',
-        description: 'Being from Ohio originally I never imagined being able to grow tropical fruits like these outdoors.',
+        img: classroom_complete,
+        title: 'Classroom complete',
         gridCols: 4,
         hideTitle: true,
     },
     {
-        img: banana_papaya_top,
-        title: 'Banana and Papaya Harvest',
-        description: 'Being from Ohio originally I never imagined being able to grow tropical fruits like these outdoors.',
+        img: classroom_framed,
+        title: 'Classroom framed',
         gridCols: 4,
         hideTitle: true,
     },
@@ -50,18 +37,27 @@ const photoSet = [
 
 export default function ClassroomInfo(props) {
     return (
-        <React.Fragment>
+        <Box py={3} >
             <Typography align='left' color='textPrimary' component='h3' variant='h3'>
                 Building the Classroom
             </Typography>
             <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
-                Through a stroke of luck, in 2018, I was able to purchase the lot adjacent to the original garden.
-                I bought an eight by twenty foot trailer frame and began planning the tiny-house-like structure that
-                would eventually serve as the Classroom. 
+                In 2018, I was able to purchase the lot adjacent to the original garden, doubling its size.
+                shortly afterward I bought a larger trailer (8' by 20') and began building a space to serve as 
+                my workshop and my classroom for hosting my tutoring clients.
+                
+            </Typography>
+            <Typography align='justify' color='textPrimary' gutterBottom component='p' variant='body1'>
+                The Classroom roof became the new mounting place for my solar panels, and I tore down 
+                the rickety tower they had been on. Besides generating its own electrical power, the 
+                Classroom also makes use of passive cooling. 
+                The Classroom's outer layer is sheet metal, which can get quite hot in the summer sun. 
+                I designed the walls and roof to be hollow in a way that lets most of the heat escape via convection 
+                before it makes its way through the inner walls to the living space.
                 
             </Typography>
             <PhotoGrid data={photoSet} />
-        </React.Fragment>
+        </Box>
     )
 }
 

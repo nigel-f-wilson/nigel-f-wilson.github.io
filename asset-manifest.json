@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.4fea4fb0.chunk.css",
-    "main.js": "/static/js/main.b9b2f7da.chunk.js",
-    "main.js.map": "/static/js/main.b9b2f7da.chunk.js.map",
+    "main.js": "/static/js/main.63a3427c.chunk.js",
+    "main.js.map": "/static/js/main.63a3427c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.db397412.js",
     "runtime-main.js.map": "/static/js/runtime-main.db397412.js.map",
     "static/js/2.849f97ee.chunk.js": "/static/js/2.849f97ee.chunk.js",
@@ -28,7 +28,7 @@
     "static/media/classroom_framed.54cd5c3a.JPG": "/static/media/classroom_framed.54cd5c3a.JPG",
     "static/media/classroom_rafters.c620a8a1.JPG": "/static/media/classroom_rafters.c620a8a1.JPG",
     "static/media/colorful_harvest.3cea304d.JPG": "/static/media/colorful_harvest.3cea304d.JPG",
-    "static/media/connect-four-game.c5d62714.JPG": "/static/media/connect-four-game.c5d62714.JPG",
+    "static/media/connect-four.50680740.JPG": "/static/media/connect-four.50680740.JPG",
     "static/media/cookie_jar.69329545.jpg": "/static/media/cookie_jar.69329545.jpg",
     "static/media/dwarf_cavendish_harvest.3615318e.JPG": "/static/media/dwarf_cavendish_harvest.3615318e.JPG",
     "static/media/fifteengame.40bd936d.JPG": "/static/media/fifteengame.40bd936d.JPG",
@@ -89,6 +89,6 @@
     "static/js/runtime-main.db397412.js",
     "static/js/2.849f97ee.chunk.js",
     "static/css/main.4fea4fb0.chunk.css",
-    "static/js/main.b9b2f7da.chunk.js"
+    "static/js/main.63a3427c.chunk.js"
   ]
 }

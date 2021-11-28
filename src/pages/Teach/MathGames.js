@@ -11,7 +11,7 @@ import SpacerBox from "../../components/Navbar/SpacerBox";
 // MY images
 import tic_tac_toe_screenshot from "../../images/projects/tictactoehints.JPG";
 import fifteen_game_screenshot from "../../images/projects/fifteengame.JPG";
-import connect_four_game from "../../images/projects/connect-four-game.JPG";
+import connect_four_screenshot from "../../images/projects/connect-four.JPG";
 
 
 // MUI Imports
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
         // width: '100%',
     },
     cardBody: {
-        height: '7rem',
+        height: '5.5rem',
         margin: '0.35rem 0.7rem',
     },
     cardButton: {
@@ -72,26 +72,26 @@ const cardHeight = '1000px';
 const cardData = [
     {
         'title': 'Tic Tac Toe',
-        'bodyText': 'Learn about mathematical proof and logical rigor while mastering this classic strategy game.',
+        'bodyText': 'Learn about logical rigor in the context of a familiar strategy game. Includes a complete solution.',
         'imageTitle': 'Tic Tac Toe game board with hints',
         'image': tic_tac_toe_screenshot,
-        'href': 'https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/',
+        'href': 'https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/tic_tac_toe_rules',
         'buttonText': 'Play Now!'
     },
     {
         'title': 'The 15-Game',
-        'bodyText': 'Practice mental arithmetic in this combinatorial game, then see how, beneath the surface, it is surprisingly similar to another game.',
-        'imageTitle': 'Homegrown bananas, papaya, and turmeric flower',
+        'bodyText': 'Get three cards that add up to 15 to win this combinatorial game.',
+        'imageTitle': 'fifteen game screenshot',
         'image': fifteen_game_screenshot,
-        'href': 'https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/fifteen_game',
+        'href': 'https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/fifteen_rules',
         'buttonText': 'Play Now!'
     },
     {
         'title': 'Math Fact Connect Four',
-        'bodyText': 'COMING SOON! Practice basic addition and multiplication facts to make moves in this variation on classic connect four.',
-        'imageTitle': "Garden founder's profile picture",
-        'image': connect_four_game,
-        'href': 'https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/',
+        'bodyText': 'Mental math fluency practice blended with a game of classic connect four.',
+        'imageTitle': "connect four screenshot",
+        'image': connect_four_screenshot,
+        'href': 'https://nolastemgarden.github.io/math-fact-connect-four/',
         'buttonText': 'Play Now!'
     },
 ]

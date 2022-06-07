@@ -23,7 +23,11 @@ const useStyles = makeStyles((theme) => ({
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xpzbnqoa");
   if (state.succeeded) {
-      return <p>Your message sent successfully! Thanks for reaching out!</p>;
+    return (
+      <Typography color='textPrimary' >
+        Your message sent successfully! Thanks for reaching out!
+      </Typography>
+    )
   }
   return (
       <form onSubmit={handleSubmit}>

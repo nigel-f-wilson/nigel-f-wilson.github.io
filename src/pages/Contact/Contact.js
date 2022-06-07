@@ -119,10 +119,10 @@ export default function ContactPage(props) {
                         href='https://www.instagram.com/nola_stem_garden/'
                     />
                     <Button className={classes.ghLogo}
-                        href='https://github.com/nolastemgarden'
+                        href='https://github.com/nigel-f-wilson/'
                     />
                     <Button className={classes.linkedInLogo}
-                        href='https://www.linkedin.com/in/nigel-wilson-086a6377/'
+                        href='https://www.linkedin.com/in/nigel-f-wilson/'
                     />
                     
                 </Box>

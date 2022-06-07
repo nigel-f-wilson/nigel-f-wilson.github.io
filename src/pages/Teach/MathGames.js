@@ -75,7 +75,7 @@ const cardData = [
         'bodyText': 'Learn about logical rigor in the context of a familiar strategy game. Includes a complete solution.',
         'imageTitle': 'Tic Tac Toe game board with hints',
         'image': tic_tac_toe_screenshot,
-        'href': 'https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/tic_tac_toe_rules',
+        'href': 'https://nigel-f-wilson.github.io/tic-tac-toe-and-the-fifteen-game/#/tic_tac_toe_rules',
         'buttonText': 'Play Now!'
     },
     {
@@ -83,7 +83,7 @@ const cardData = [
         'bodyText': 'Get three cards that add up to 15 to win this combinatorial game.',
         'imageTitle': 'fifteen game screenshot',
         'image': fifteen_game_screenshot,
-        'href': 'https://nolastemgarden.github.io/tic-tac-toe-and-the-fifteen-game/#/fifteen_rules',
+        'href': 'https://nigel-f-wilson.github.io/tic-tac-toe-and-the-fifteen-game/#/fifteen_rules',
         'buttonText': 'Play Now!'
     },
     {
@@ -91,7 +91,7 @@ const cardData = [
         'bodyText': 'Mental math fluency practice blended with a game of classic connect four.',
         'imageTitle': "connect four screenshot",
         'image': connect_four_screenshot,
-        'href': 'https://nolastemgarden.github.io/math-fact-connect-four/',
+        'href': 'https://nigel-f-wilson.github.io/math-fact-connect-four/',
         'buttonText': 'Play Now!'
     },
 ]

@@ -1,19 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 
 // MY components
 import Navbar from "../../components/Navbar/Navbar";
-
+import FormspreeContactForm from "./FormspreeContactForm"
 
 // MY images
 import fbLogo from "./facebook_logo.png";
-// import fbLogo from "./facebook_logo.jpg";
 import igLogo from "./instagram_logo.jpg";
 import ghLogo from "./octocat_logo.png";
-// import ghLogo from "./GitHub-logo.png";
 import linkedInLogo from "./linked_in_logo.png";
-
 
 // MUI Imports
 import Container from '@material-ui/core/Container';
@@ -91,18 +86,21 @@ export default function ContactPage(props) {
                     <Typography align='center' color='textPrimary' component='h1' variant='h1'>
                         Contact Us
                     </Typography>
+
+                    <FormspreeContactForm />
+
                 </Box>
                 <Box mx='3rem' marginBottom='3rem'  >
-                    <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
+                    {/* <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
                         <strong>Phone:</strong>&nbsp; <br />(504)&nbsp;252&nbsp;0762 <br /> <br />
                     </Typography>
                     <Typography align='center' color='textPrimary' variant='h5' gutterBottom >
                         <strong>Email:</strong>&nbsp; <br />nolastemgarden@gmail.com <br /> <br />
-                    </Typography>
-                    <Typography align='center' color='textPrimary' variant='body1' gutterBottom >
+                    </Typography> */}
+                    {/* <Typography align='center' color='textPrimary' variant='body1' gutterBottom >
                         Book lessons and buy produce on our Facebook page.
                         View and help out with my programming projects on GitHub.  <br />
-                    </Typography>
+                    </Typography> */}
                     <Typography align='center' color='textPrimary' variant='body1' gutterBottom >
                         {/* Facebook for lesson booking and produce market.  <br />
                         Instagram for more up to date garden pictures.   <br />
